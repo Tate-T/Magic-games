@@ -4,6 +4,20 @@
     position: relative;
 }
 
+.leap-year::after {
+    content: "";
+
+    position: absolute;
+    top: 163px;
+    left: 50%;
+
+    width: 536px;
+    height: 1px;
+
+    transform: translate(-50%, 0);
+    background-color: #000;
+  }
+
 .leap-year__title{
 color: #000;
 font-family: 'Montserrat Alternates';
@@ -14,11 +28,8 @@ margin-bottom: 36px;
 }
 
 .leap-year__input{
-display: inline-flex;
 padding: 10px 45px 10px 10px;
-align-items: flex-start;
-gap: 10px;
-border-radius: 20px;
+border-radius: 20px 0 0 20px;
 background: #D7D7D7;
 border: none;
 box-shadow: 3px 3px 0px 0px #7E7E7E;
@@ -39,21 +50,19 @@ font-weight: 400;
 line-height: normal;
 }
 
+.leap-year__search{
+    background-color: black;
+    height: 39px;
+    width: 35px;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 3px 3px 0px 0px #7E7E7E;
+}
+
+.leap-year__input-button{
+    display: flex;
+}
+
 .leap-year__box{
     display: flex;
     gap: 149px;
-}
-
-.leap-year__search{
-    width: 35px;
-    height: 35px;
-    padding: 10px;
-    border-radius: 0 20px 20px 0;
-    background-color: #000;
-}
-
-.test{
-    width: 15px;
-    height: 15px;
-    background-color: #fff;
 }
