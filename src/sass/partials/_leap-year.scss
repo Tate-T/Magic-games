@@ -1,0 +1,59 @@
+.leap-year{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.leap-year__title{
+color: #000;
+font-family: 'Montserrat Alternates';
+font-size: 16px;
+font-weight: 400;
+text-align: center;
+margin-bottom: 36px;
+}
+
+.leap-year__input{
+display: inline-flex;
+padding: 10px 45px 10px 10px;
+align-items: flex-start;
+gap: 10px;
+border-radius: 20px;
+background: #D7D7D7;
+border: none;
+box-shadow: 3px 3px 0px 0px #7E7E7E;
+}
+
+.leap-year__input::placeholder {
+    color: #7e7e7e;
+    font-size: 12px;
+}
+
+.leap-year__text{
+color: #039900;
+
+font-family: "Montserrat Alternates";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.leap-year__box{
+    display: flex;
+    gap: 149px;
+}
+
+.leap-year__search{
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    background-color: #000;
+}
+
+.test{
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+}
