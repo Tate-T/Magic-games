@@ -1,3 +1,7 @@
+@import "./base/reset";
+@import "./base/common";
+@import "./base/normalize";
+
 @import "./partials/starter-modal";
 @import "./partials/header";
 @import "./partials/hero";
@@ -12,5 +16,3 @@
 @import "./partials/slider";
 @import "./partials/footer";
 @import "./partials/footer-modal";
-
-@import "./base/reset";

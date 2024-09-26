@@ -1,0 +1,94 @@
+.computer-number {
+  position: relative;
+  padding: 36px 0;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 163px;
+    left: 50%;
+
+    width: 536px;
+    height: 1px;
+
+    transform: translate(-50%, 0);
+    background-color: #000;
+  }
+
+  &__title {
+    margin: 0 0 36px 0;
+
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__flex {
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__input-shadow {
+    position: relative;
+
+    width: 150px;
+    margin: 0 202px 0 0;
+
+    display: flex;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: 3px;
+      left: 3px;
+
+      display: block;
+      width: 150px;
+      height: 35px;
+      border-radius: 20px;
+
+      background-color: #bebebe;
+    }
+  }
+
+  &__input {
+    border-radius: 20px 0 0 20px;
+    padding: 10px 10px 10px 10px;
+    width: 115px;
+    height: 35px;
+
+    background-color: #d7d7d7;
+
+    &::placeholder {
+      color: #7e7e7e;
+      font-size: 12px;
+    }
+  }
+
+  &__search-bg {
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+
+    background-color: #000;
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+
+    background-color: #fff;
+  }
+
+  &__text {
+    color: #039900;
+    font-size: 12px;
+  }
+}

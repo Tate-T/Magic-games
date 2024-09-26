@@ -12,5 +12,3 @@
 // import "./js/slider.js";
 // import "./js/footer.js";
 // import "./js/footer-modal.js";
-
-// Діма, підключив не правильно!
