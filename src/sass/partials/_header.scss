@@ -7,7 +7,7 @@
     margin-right: auto;
     margin-left: auto;
 
-    outline: solid red;
+    background-color: #fff;
 
     &__navigation {
         display: flex;
@@ -57,7 +57,7 @@
         display: flex;
         align-items: center;
         gap: 50px;
-        margin-right: 348px;
+        margin-right: 344px;
 
         &:first-child {
             width: 96px;
@@ -126,6 +126,7 @@
     &__greeting {
         display: flex;
         justify-content: flex-end;
+        gap: 4px;
 
         color: #000;
         text-align: right;
