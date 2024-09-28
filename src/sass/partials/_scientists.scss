@@ -66,6 +66,15 @@
 
     &__buttons-column:last-child &__buttons-item:last-child {
         width: 368px;
+        display: flex;
+        justify-content: flex-start;
+        margin-right: auto;
+        text-align: right;
+    }
+
+    &__buttons-column:last-child &__buttons-item:last-child > &__button {
+        width: 368px;
+        text-align: left;
     }
 
     &__button {
