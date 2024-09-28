@@ -75,7 +75,14 @@
   }
 
   &__text {
-    color: #039900;
     font-size: 12px;
+
+    &--correctly {
+      color: #039900;
+    }
+
+    &--uncorrectly {
+      color: #df1515;
+    }
   }
 }
