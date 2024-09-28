@@ -1,7 +1,7 @@
 // import "./js/starter-modal.js";
 // import "./js/header.js";
 // import "./js/hero.js";
-// import "./js/leap-year.js";
+import "./js/leap-year.js";
 // import "./js/computer-number.js";
 // import "./js/rps.js";
 // import "./js/calculator.js";
