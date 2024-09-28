@@ -1,12 +1,12 @@
 .biggest-number{
-    padding: 36px 0;
+    padding: 0px 0;
     position: relative;
 
    &::after {
         content: "";
     
         position: absolute;
-        top: 214px;
+        top: 204px;
         left: 50%;
     
         width: 536px;
@@ -43,7 +43,7 @@
         display: flex;
         justify-content: center;
         gap: 38px;
-        margin-bottom: 46px;
+        margin-bottom: 26px;
     }
     
    &__text{
@@ -52,5 +52,18 @@
     font-size: 12px;
     font-weight: 400;
     text-align: center;
+    margin-bottom: 20px;
+    }
+
+    &__btn{
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    font-family: "Montserrat Alternates";
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 20px;
+    background: #000;
+    padding: 10px 20px;
     }
 }
