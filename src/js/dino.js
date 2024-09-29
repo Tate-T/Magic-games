@@ -9,9 +9,9 @@ startButton.onclick = () => {
   startGame();
 };
 
-document.addEventListener("keydown", (event) => {
-  if (event.code === "Space" && !isJumping) {
-    event.preventDefault();
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space" && !isJumping) {
+    e.preventDefault();
     jump();
   }
 });
