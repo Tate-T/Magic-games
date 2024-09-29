@@ -43,3 +43,12 @@ function startGame() {
     }
   }, 10);
 }
+
+function jump() {
+  isJumping = true;
+  dino.style.bottom = "80px"; // Стрибок
+  setTimeout(() => {
+    dino.style.bottom = "0px"; // Повернення вниз
+    isJumping = false;
+  }, 300); // Час стрибка
+}

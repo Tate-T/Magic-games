@@ -39,13 +39,14 @@
   }
 
   &__play {
-    position: absolute;
-    bottom: 0;
+    position: absolute; 
+    bottom: 0; 
     left: 50px;
     width: 40px;
     height: 40px;
     background-image: url("../../images/dinosaur.png");
     background-size: cover;
+    transition: bottom 0.3s; 
   }
 
   &__cactus {
@@ -84,4 +85,8 @@
   100% {
     right: 100%;
   }
+}
+
+.jump {
+  bottom: 80px;
 }
