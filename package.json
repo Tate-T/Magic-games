@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build --base=/Magic-games-project/",
+        "build": "vite build --base=/Magic-games/",
         "preview": "vite preview"
     },
     "devDependencies": {
@@ -16,7 +16,6 @@
     "license": "ISC",
     "dependencies": {
         "sass": "^1.77.2",
-        "scss": "^0.2.4",
         "vite-plugin-full-reload": "^1.0.5",
         "vite-plugin-html-inject": "^1.0.1"
     }
