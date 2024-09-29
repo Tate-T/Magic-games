@@ -32,16 +32,16 @@
     gap: 38px;
   }
   
-  &__item {
-    background-color: #000;
-    padding: 10px;
-    border-radius: 20px;
-    width: 60px;
-    height: 60px;
-  }
+  // &__item {
+  //   background-color: #000;
+  //   padding: 10px;
+  //   border-radius: 20px;
+  //   width: 60px;
+  //   height: 60px;
+  // }
   
   &__text-round {
-    color: #039900;
+    color: black;
     font-family: "Montserrat Alternates";
     font-size: 12px;
     font-weight: 400;
@@ -80,8 +80,16 @@
   &__list-score {
     transform: translateX(104px);
   }
-}
 
+  &__btn-choice{
+    background-color: #000;
+      padding: 10px;
+      border-radius: 20px;
+      width: 60px;
+      height: 60px;
+  }
+  
+}
 .rps__item-rock, .rps__item-paper, .rps__item-scissors{
   width: 50px;
   height: 40px;
@@ -91,3 +99,14 @@
   margin-top: 3px;
 }
 
+.rps-number__text--correctly {
+  color: #039900; 
+}
+
+.rps-number__text--uncorrectly {
+  color: #df1515;
+}
+
+.rps-year__text--black {
+  color: black; 
+}
