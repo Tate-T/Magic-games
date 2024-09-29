@@ -7,7 +7,7 @@
     margin-right: auto;
     margin-left: auto;
 
-    background-color: #fff;
+    background-color: $white-color;
 
     &__navigation {
         display: flex;
@@ -34,7 +34,7 @@
             width: 44px;
             height: 15px;
             
-            color: #000;
+            color: $black-color;
             font-family: "Montserrat Alternates";
             font-size: 12px;
             font-weight: 400;
@@ -46,7 +46,7 @@
 
             padding-left: 14px;
 
-            color: #000;
+            color: $black-color;
             font-family: "Sacramento";
             font-size: 12px;
             font-weight: 400;
@@ -64,7 +64,7 @@
         }
 
         &-item-link {
-            color: #000;
+            color: $black-color;
             font-family: "Montserrat Alternates";
             font-size: 12px;
             font-weight: 400;
@@ -86,7 +86,7 @@
         margin-right: 51px;
 
         border-radius: 11px;
-        background: #7A7A7A;
+        background: $grey-color;
 
         &-changer {
             width: 0;
@@ -103,7 +103,7 @@
 
             cursor: pointer;
             border-radius: 11px;
-            background-color: #7A7A7A;
+            background-color: $grey-color;
         }
 
         &-slider::before {
@@ -117,9 +117,9 @@
             height: 20px;
             cursor: pointer;
 
-            border: solid 0.5px black;
+            border: solid 0.5px $black-color;
             border-radius: 50%;
-            background-color: #ffffff;
+            background-color: $white-color;
         }
 
         &-icon {
@@ -128,7 +128,7 @@
             height: 20.667px;
             padding: 2px 2px 2px 1px;
             border-radius: 15.033px;
-            stroke: #000;
+            stroke: $black-color;
             position: relative;
             z-index: 1;
         }
