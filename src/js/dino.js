@@ -9,9 +9,9 @@ startButton.onclick = () => {
   startGame();
 };
 
-document.addEventListener("keydown", (event) => {
-  if (event.code === "Space" && !isJumping) {
-    event.preventDefault();
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space" && !isJumping) {
+    e.preventDefault();
     jump();
   }
 });
@@ -42,13 +42,4 @@ function startGame() {
       location.reload();
     }
   }, 10);
-}
-
-function jump() {
-  isJumping = true;
-  dino.style.bottom = "80px"; // Стрибок
-  setTimeout(() => {
-    dino.style.bottom = "0px"; // Повернення вниз
-    isJumping = false;
-  }, 300); // Час стрибка
 }
