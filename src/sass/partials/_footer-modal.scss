@@ -1,0 +1,56 @@
+.f__modal {
+  width: 463px;
+  height: 245px;
+  background-color: #fff;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 20px;
+  position: relative;
+  padding: 83px 138px 138px 138px;
+
+  &-title {
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &-icon {
+    background-color: black;
+    width: 30px;
+    height: 30px;
+
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(3),
+    &:last-child {
+      position: absolute;
+    }
+    &:first-child {
+      background-color: red;
+      position: absolute;
+      top: -39px;
+      left: -65px;
+    }
+    &:nth-child(2) {
+      background-color: green;
+      top: 35px;
+      left: -29px;
+    }
+    &:nth-child(3) {
+      background-color: rgb(255, 0, 0);
+      top: -39px;
+      right: -65px;
+    }
+    &:last-child {
+      background-color: green;
+
+      top: 35px;
+      right: -29px;
+    }
+  }
+  &-box {
+    position: relative;
+  }
+}
