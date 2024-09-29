@@ -1,0 +1,77 @@
+.footer {
+  padding: 61px 0;
+
+  &__container {
+    display: flex;
+    gap: 186px;
+    align-items: center;
+    // justify-content: space-between;
+  }
+  &__logo {
+    // width: 93px;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    &-font {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 44px;
+    }
+    &-text:first-child {
+      font-family: "Montserrat Alternates";
+      font-size: 12px;
+      line-height: normal;
+    }
+    &-text:last-child {
+      font-family: Sacramento;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  &__icon {
+    width: 40px;
+    height: 38px;
+    // display: flex;
+    // align-items: center;
+  }
+  &__list {
+    width: 207px;
+  }
+  &__text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 170%;
+  }
+  &__box {
+    display: flex;
+    gap: 36px;
+    margin-bottom: 18px;
+  }
+  &__input {
+    border-radius: 20px;
+    background: $light-grey-color;
+    padding: 10px 80px 10px 10px;
+    gap: 10px;
+
+    ::placeholder {
+      color: $grey-color;
+      font-size: 12px;
+      line-height: normal;
+    }
+  }
+  &__button {
+    border-radius: 20px;
+    background-color: #000;
+    padding: 10px;
+    color: #fff;
+
+    font-size: 12px;
+    line-height: normal;
+  }
+  &__confidential {
+    font-size: 6px;
+    line-height: normal;
+  }
+}

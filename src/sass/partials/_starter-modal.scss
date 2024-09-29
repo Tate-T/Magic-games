@@ -42,10 +42,10 @@
     width: 169px;
     padding: 10px 9px 10px 10px;
     border-radius: 20px;
-    background: #d7d7d7;
+    background: $light-grey-color;
 
     &::placeholder {
-      color: #7e7e7e;
+      color: $grey-color;
       font-size: 12px;
       font-weight: 400;
       line-height: normal;
