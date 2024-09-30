@@ -39,7 +39,7 @@
     }
     
     &__text{
-    color: #039900;
+    color: black;
     
     font-family: "Montserrat Alternates";
     font-size: 12px;
@@ -64,4 +64,22 @@
         justify-content: center;
         align-items: center;
     }
+
+    &__svg{
+        width: 15px;
+        height: 15px;
+        margin: 3px 2px 0 0;
+    }
 }
+
+.leap-number__text--correctly {
+    color: #039900; 
+  }
+  
+  .leap-number__text--uncorrectly {
+    color: #df1515;
+  }
+  
+  .leap-year__text--black {
+    color: black; 
+  }
