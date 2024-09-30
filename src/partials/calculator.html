@@ -2,23 +2,55 @@
   <div class="container">
     <h2 class="calculator__title">Калькулятор</h2>
     <div class="calculator__flex">
-      <input type="text" class="calculator__input" placeholder="Введіть число"/>
+      <input
+        type="text"
+        class="calculator__input calculator__input--first"
+        placeholder="Введіть число"
+      />
       <ul class="calculator__list">
         <li class="calculator__item">
+          <input
+            type="radio"
+            name="operations"
+            data-operation="+"
+            class="calculator__radio"
+          />
           <button class="calculator__btn">+</button>
         </li>
         <li class="calculator__item">
+          <input
+            type="radio"
+            name="operations"
+            data-operation="*"
+            class="calculator__radio"
+          />
           <button class="calculator__btn">*</button>
         </li>
         <li class="calculator__item">
+          <input
+            type="radio"
+            name="operations"
+            data-operation="-"
+            class="calculator__radio"
+          />
           <button class="calculator__btn">-</button>
         </li>
         <li class="calculator__item">
+          <input
+            type="radio"
+            name="operations"
+            data-operation="/"
+            class="calculator__radio"
+          />
           <button class="calculator__btn">/</button>
         </li>
       </ul>
-      <input type="text" class="calculator__input" placeholder="Введіть число"/>
-      <button class="calculator__btn calculator__btn--equals">=</button>
+      <input
+        type="text"
+        class="calculator__input calculator__input--second"
+        placeholder="Введіть число"
+      />
+      <button class="calculator__btn--equals">=</button>
       <p class="calculator__output">Результат</p>
     </div>
   </div>

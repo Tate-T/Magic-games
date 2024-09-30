@@ -1,1 +1,2 @@
-import "./js/computer-number";
+import "./js/leap-year";
+import "./js/calculator";
