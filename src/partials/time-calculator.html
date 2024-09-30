@@ -1,7 +1,16 @@
-<section class="time-section">
-    <h2 class="time-title">Калькулятор часу</h2>
-    <div class="time-box">
-        <input type="number" placeholder="Введіть число" class="time-input">
-        <p class="time-text">3 дн. 15:45:01</p>
+<section class="time">
+  <div class="container">
+    <h2 class="time__title">Калькулятор часу</h2>
+    <div class="time__box">
+      <form class="time__form">
+        <input placeholder="Введіть число" class="time__input" />
+        <button class="time__button" type="submit">
+            <svg class="time__icon">
+                <use href="../images/sprite.svg#search"></use>
+            </svg>
+        </button>
+      </form>
+      <p class="time__text">3 дн. 15:45:01</p>
     </div>
+  </div>
 </section>
