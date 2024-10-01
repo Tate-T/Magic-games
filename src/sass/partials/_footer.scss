@@ -49,6 +49,9 @@
     gap: 36px;
     margin-bottom: 18px;
   }
+  &__form {
+    max-width: 345px;
+  }
   &__input {
     border-radius: 20px;
     background: $light-grey-color;
@@ -60,6 +63,14 @@
       font-size: 12px;
       line-height: normal;
     }
+    &--wrong {
+      box-shadow: red 1px 5px 7px 5px;
+
+      &::placeholder {
+        color: $red-color;
+      }
+      // background-color: red;
+    }
   }
   &__button {
     border-radius: 20px;
@@ -69,6 +80,8 @@
 
     font-size: 12px;
     line-height: normal;
+
+    
   }
   &__confidential {
     font-size: 6px;
