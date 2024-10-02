@@ -1,12 +1,22 @@
 .f__modal {
   width: 463px;
-  height: 245px;
   background-color: #fff;
   margin-right: auto;
   margin-left: auto;
   border-radius: 20px;
   position: relative;
   padding: 83px 138px 138px 138px;
+
+  &-close {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: transparent;
+  }
+
+  
 
   &-title {
     text-align: center;
@@ -53,4 +63,7 @@
   &-box {
     position: relative;
   }
+}
+.no-scroll {
+  overflow: hidden;
 }
