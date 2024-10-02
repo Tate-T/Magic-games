@@ -31,8 +31,10 @@
     }
   }
   &__icon {
-    width: 40px;
+    width: 42px;
     height: 38px;
+    stroke: $black-color;
+    fill: $white-color;
     // display: flex;
     // align-items: center;
   }
