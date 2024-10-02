@@ -11,11 +11,22 @@
     </a>
     <ul class="header__list">
       <li class="header__list-item">
-        <a class="header__list-item-link" href="#">
+        <a class="header__list-item-link" id="header-link" href="#">
           <span>Інтерактив</span>
           <svg class="header__list-item-menu-arrow">
             <use href="../images/sprite.svg#menu-arrow"></use>
           </svg>
+          <ul class="header__interactives-list">
+            <li class="header__interactives-item">
+              <a class="header__interactives-link" href="#leap-year">Числовий</a>
+            </li>
+            <li class="header__interactives-item">
+              <a class="header__interactives-link" href="#dino">Ігровий</a>
+            </li>
+            <li class="header__interactives-item">
+              <a class="header__interactives-link" href="#slider">Ознайомчий</a>
+            </li>
+          </ul>
         </a>
       </li>
       <li class="header__list-item">
@@ -28,7 +39,8 @@
     <label class="header__theme">
         <input class="header__theme-changer" type="checkbox"></input>
         <span class="header__theme-slider">
-          <img class="header__theme-icon" src="../images/sun-icon.png" alt="Light theme">
+          <img class="header__theme-icon header__theme-icon-sun" src="../images/sun-icon.png" alt="Light theme" value="light">
+          <img class="header__theme-icon header__theme-icon-moon" src="../images/moon-icon.png" alt="Black theme" value="dark">
         </span>
     </label>
     <p class="header__greeting">

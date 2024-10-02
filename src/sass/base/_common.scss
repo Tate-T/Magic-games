@@ -1,3 +1,59 @@
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode a {
+  color: #ffffff;
+}
+
+.dark-mode p {
+  color: #ffffff;
+}
+
+.dark-mode p.calculator__output {
+  color: #7e7e7e;
+}
+
+.dark-mode h1 {
+  color: #ffffff;
+}
+
+.dark-mode h2 {
+  color: #ffffff;
+}
+
+.dark-mode button {
+  border: solid 0.5px #ffffff;
+}
+
+.dark-mode .scientists__button {
+  padding: 10px 19px;
+}
+
+.dark-mode .header__interactives-list {
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+}
+
+.dark-mode li {
+  background-color: #000000;
+}
+
+.dark-mode li.header__interactives-item:hover {
+  background-color: #131212;
+}
+
+.dark-mode section::after {
+  background-color: #ffffff;
+}
+
 * {
   font-family: "Montserrat Alternates";
   font-weight: 400;

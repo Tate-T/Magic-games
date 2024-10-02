@@ -1,3 +1,4 @@
+import "./js/header"
 import "./js/leap-year"
 import "./js/computer-number";
 import "./js/rps"

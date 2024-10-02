@@ -7,8 +7,6 @@
     margin-right: auto;
     margin-left: auto;
 
-    background-color: $white-color;
-
     &__navigation {
         display: flex;
         align-items: center;
@@ -63,6 +61,10 @@
             width: 96px;
         }
 
+        &-item {
+            position: relative;
+        }
+
         &-item-link {
             color: $black-color;
             font-family: "Montserrat Alternates";
@@ -78,12 +80,69 @@
         }
     }
 
+    &__interactives-list {
+        position: absolute;
+        top: 45px;
+        left: -32px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 160px;
+        height: 105px;
+
+        border-radius: 0px 0px 20px 20px;
+        border-right: 1px solid $black-color;
+        border-bottom: 1px solid $black-color;
+        border-left: 1px solid $black-color;
+        background: $white-color;
+
+        &-show {
+            display: flex;
+        }
+    }
+
+    &__interactives-item {
+        position: relative;
+        padding: 10px 0;
+        z-index: 1;
+        cursor: pointer;
+        text-align: center;
+
+        width: 157px;
+        height: 35px;
+
+        &:hover {
+            background-color: #F1F1F1;
+        }
+
+        &:first-child {
+            height: 34px;
+        }
+
+        &:last-child {
+            height: 34px;
+            border-radius: 0px 0px 20px 20px;
+        }
+    }
+
+    &__interactives-link {
+        text-align: center;
+        align-items: center;
+        color: $black-color;
+        font-family: "Montserrat Alternates";
+        font-size: 12px;
+        font-weight: 400;
+    }
+
     &__theme {
         display: inline-flex;
         position: relative;
+        margin-right: 51px;
+
         width: 40px;
         height: 20px;
-        margin-right: 51px;
 
         border-radius: 11px;
         background: $grey-color;
@@ -104,6 +163,7 @@
             cursor: pointer;
             border-radius: 11px;
             background-color: $grey-color;
+            transition: 0.3s;
         }
 
         &-slider::before {
@@ -120,17 +180,47 @@
             border: solid 0.5px $black-color;
             border-radius: 50%;
             background-color: $white-color;
+            transition: 0.3s;
+        }
+
+        &-changer:checked + &-slider::before {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            width: 20.5px;
+
+            transform: translateX(20px);
+            background-color: $black-color;
         }
 
         &-icon {
             display: flex;
             width: 20.533px;
             height: 20.667px;
-            padding: 2px 2px 2px 1px;
+            padding: 2px;
             border-radius: 15.033px;
             stroke: $black-color;
-            position: relative;
+            position: absolute;
             z-index: 1;
+
+            &-sun {
+                display: block;
+                left: 0;
+            }
+
+            &-moon {
+                display: none;
+                right: 0;
+            }
+        }
+
+        &-changer:checked + &-slider > &-icon-sun {
+            display: none;
+        }
+
+        &-changer:checked + &-slider > &-icon-moon {
+            display: block;
         }
     }
 
