@@ -1,5 +1,4 @@
-import "./js/leap-year";
-import "./js/calculator";
+import "./js/header"
 import "./js/leap-year"
 import "./js/computer-number";
 import "./js/footer-modal";
