@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #ffffff;
   color: #000000;
@@ -171,6 +175,7 @@ body {
 * {
   font-family: "Montserrat Alternates";
   font-weight: 400;
+  box-sizing: border-box;
   
   &::selection {
     background-color: #000;
@@ -181,8 +186,6 @@ body {
       color: #000;
     }
   }
-  
-  box-sizing: border-box;
 }
 
 .container {
