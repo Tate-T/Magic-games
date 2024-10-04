@@ -1,11 +1,15 @@
 body {
   background-color: #ffffff;
   color: #000000;
+
+  cursor: url("../../images/cursor.webp"), auto;
 }
 
 .dark-mode {
   background-color: #000000;
   color: #ffffff;
+
+  cursor: url("../../images/dark-mode-cursor.webp"), auto;
 }
 
 .dark-mode .main {
@@ -60,6 +64,10 @@ body {
 .dark-mode .footer__icon {
   stroke: #ffffff;
   fill: #000000;
+}
+
+.dark-mode .footer__button {
+  border: solid 1px #ffffff;
 }
 
 .dark-mode h1 {
@@ -120,8 +128,16 @@ body {
   border: 6px solid #ffffff;
 }
 
+.dark-mode .dino__play {
+  background-image: url("../../images/dark-mode-dinosaur.webp");
+}
+
 .dark-mode .dino__button {
   border: solid 1px #ffffff;
+}
+
+.dark-mode .dino__cactus {
+  background-image: url("../../images/dark-mode-cactus.webp");
 }
 
 .dark-mode .slider-btn {
@@ -155,6 +171,7 @@ body {
 * {
   font-family: "Montserrat Alternates";
   font-weight: 400;
+  box-sizing: border-box;
 }
 
 .container {
