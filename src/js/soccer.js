@@ -2,7 +2,7 @@ const stadium = document.querySelector(".football__stadium");
 const ball = document.querySelector(".football__stadium-ball");
 
 function throwBall() {
-  stadium.addeListener("click", (e) => {
+  stadium.addEventListener("click", (e) => {
     let stadiumCords = stadium.getBoundingClientRect();
 
     let ballCords = {
