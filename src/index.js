@@ -6,4 +6,5 @@ import "./js/rps"
 import "./js/calculator";
 import "./js/slider.js";
 import "./js/dino"
+import "./js/soccer";
 import "./js/biggest-number";

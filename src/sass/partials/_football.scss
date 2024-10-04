@@ -14,14 +14,8 @@
 
     &__stadium {
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 92px;
-        padding-right: 213.79px;
-        padding: 99px 213.79px 99.79px 92px;
 
         width: 720px;
         height: 220px;
@@ -31,21 +25,14 @@
         background: $light-green-color;
 
         &-ball {
+            position: absolute;
+            top: 85px;
+            left: 92px;
+
             cursor: pointer;
             width: 50px;
             height: 50px;
-        }
-
-        &-cursor {
-            position: absolute;
-            top: 99px;
-            left: 485px;
-
-            flex-shrink: 0;
-
-            fill: $black-color;
-            stroke-width: 5px;
-            stroke: $black-color;
+            transition: all 1000ms ease-out;
         }
     }
 

@@ -1,12 +1,37 @@
 body {
   background-color: #ffffff;
   color: #000000;
+
+  cursor: url("../../images/cursor.webp"), auto;
 }
 
 .dark-mode {
   background-color: #000000;
   color: #ffffff;
+
+  cursor: url("../../images/dark-mode-cursor.webp"), auto;
 }
+
+.dark-mode .main {
+  background-color: #171717;
+  border-bottom: solid 2px #ffffff;
+  border-top: solid 2px #ffffff;
+  transition: all 900ms ease-in-out;
+}
+
+.dark-mode .main__box {
+  background-color: #000000;
+  border-left: solid 2px #FFF;
+  border-right: solid 2px #FFF;
+  transition: all 600ms ease-in-out;
+}
+
+.dark-mode header {
+  background-color: #000000;
+  color: #ffffff;
+  transition: all 300ms ease-in-out;
+}
+
 
 .dark-mode a {
   color: #ffffff;
@@ -20,6 +45,31 @@ body {
   color: #7e7e7e;
 }
 
+.dark-mode .header__logo-icon {
+  stroke: #ffffff;
+  fill: #000000;
+  transition: all 1000ms ease-in-out;
+}
+
+.dark-mode .header__list-item {
+  color: #ffffff;
+}
+
+.dark-mode .header__list-item-menu-arrow {
+  stroke: #ffffff;
+  fill: #000000;
+  transition: all 800ms ease-in-out;
+}
+
+.dark-mode .footer__icon {
+  stroke: #ffffff;
+  fill: #000000;
+}
+
+.dark-mode .footer__button {
+  border: solid 1px #ffffff;
+}
+
 .dark-mode h1 {
   color: #ffffff;
 }
@@ -28,18 +78,82 @@ body {
   color: #ffffff;
 }
 
-.dark-mode button {
+// .dark-mode button {
+//   border: solid 0.5px #ffffff;
+// }
+
+.dark-mode .slider__icon {
+  stroke: #ffffff;
+  fill: #000000;
+}
+
+.dark-mode .header__theme-slider::before {
   border: solid 0.5px #ffffff;
+}
+
+.dark-mode .leap-year__search {
+  border: solid 1px #ffffff;
+}
+
+.dark-mode .computer-number__search-bg {
+  border: solid 1px #ffffff;
+}
+
+.dark-mode .rps__btn {
+  border: solid 1px #ffffff;
+
+  &-choice {
+    border: solid 1px #ffffff;
+  }
+}
+
+.dark-mode .calculator__btn--equals {
+  border: solid 1px #ffffff;
+}
+
+.dark-mode .calculator__btn {
+  border: solid 1px #ffffff;
+}
+
+.dark-mode .time__button {
+  border: solid 1px #ffffff;
+}
+
+.dark-mode .time__box::before {
+  border-bottom: 1px dashed #ffffff;
+}
+
+.dark-mode .dino__game {
+  background-color: #000000;
+  border: 6px solid #ffffff;
+}
+
+.dark-mode .dino__play {
+  background-image: url("../../images/dark-mode-dinosaur.webp");
+}
+
+.dark-mode .dino__button {
+  border: solid 1px #ffffff;
+}
+
+.dark-mode .dino__cactus {
+  background-image: url("../../images/dark-mode-cactus.webp");
+}
+
+.dark-mode .slider-btn {
+  border-color: none;
 }
 
 .dark-mode .scientists__button {
   padding: 10px 19px;
+  border: solid 0.5px #ffffff;
 }
 
 .dark-mode .header__interactives-list {
   border-right: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
   border-left: 1px solid #ffffff;
+  top: 47px;
 }
 
 .dark-mode li {
@@ -57,7 +171,7 @@ body {
 * {
   font-family: "Montserrat Alternates";
   font-weight: 400;
-
+  
   &::selection {
     background-color: #000;
     color: #fff;
@@ -67,6 +181,8 @@ body {
       color: #000;
     }
   }
+  
+  box-sizing: border-box;
 }
 
 .container {
@@ -82,10 +198,12 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-color: #EEE;
+  transition: all 600ms ease-in-out;
 
   &__box {
     width: 1090px;
     margin: 0 auto;
+    transition: all 400ms ease-in-out;
 
     background-color: #FFF;
   }
