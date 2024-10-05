@@ -18,6 +18,10 @@ function throwBall() {
         ball.clientWidth / 2,
     };
 
+    if (ballCords.left >= 660) {
+      ballCords.left = 648;
+    }
+
     if (ballCords.top < 0) {
       ballCords.top = 0;
     }
