@@ -1,3 +1,4 @@
+import "./js/starter-modal";
 import "./js/header"
 import "./js/leap-year"
 import "./js/computer-number";
