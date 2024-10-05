@@ -3,9 +3,10 @@ import "./js/header"
 import "./js/leap-year"
 import "./js/computer-number";
 import "./js/footer-modal";
-import "./js/rps"
+import "./js/rps";
 import "./js/calculator";
-import "./js/slider.js";
-import "./js/dino"
+import "./js/slider";
+import "./js/dino";
 import "./js/soccer";
 import "./js/biggest-number";
+import "./js/scientists";
