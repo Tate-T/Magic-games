@@ -16,6 +16,10 @@
     background-color: #000;
   }
 
+  &__container {
+    position: relative;
+  }
+
   &__title {
     margin: 0 0 36px 0;
 
@@ -30,13 +34,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 250ms;
   }
 
   &__input-shadow {
     position: relative;
 
     width: 150px;
-    margin: 0 202px 0 0;
     border-radius: 20px;
     box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
 
@@ -74,13 +79,16 @@
 
   &__text {
     font-size: 12px;
+    margin: 0 0 0 220px;
 
     &--correctly {
       color: #039900;
+      margin: 0 0 0 144px;
     }
 
     &--uncorrectly {
       color: #df1515;
+      margin: 0 0 0 93px;
     }
   }
 }
