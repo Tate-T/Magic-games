@@ -5,6 +5,7 @@ import "./js/computer-number";
 import "./js/footer-modal";
 import "./js/rps"
 import "./js/calculator";
+import "./js/time-calculator";
 import "./js/slider.js";
 import "./js/dino"
 import "./js/soccer";
