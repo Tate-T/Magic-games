@@ -7,6 +7,7 @@ import "./js/rps";
 import "./js/calculator";
 import "./js/slider";
 import "./js/dino";
+import "./js/time-calculator";
 import "./js/soccer";
 import "./js/biggest-number";
 import "./js/scientists";
