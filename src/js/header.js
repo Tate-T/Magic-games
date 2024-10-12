@@ -8,6 +8,7 @@ const headerItemInteractivesEl = document.querySelector(
 const headerInteractivesLinkEl = document.querySelector(
   ".header__interactives-link"
 );
+
 let currentIdx = 0;
 
 function operationsHeaderList() {
