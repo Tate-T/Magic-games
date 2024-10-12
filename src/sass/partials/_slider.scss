@@ -56,18 +56,16 @@
   }
 
   &__img {
+    position: relative;
+
     width: 150px;
     height: 150px;
     border-radius: 20px;
 
-    background: #d9d9d9;
+    overflow: hidden;
 
     &--dima {
-      background-color: red;
-    }
-
-    &--artur {
-      background-color: green;
+      transform: translateY(-45px);
     }
 
     &--maksym {
