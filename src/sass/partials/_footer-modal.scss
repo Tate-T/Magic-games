@@ -27,7 +27,6 @@
     line-height: normal;
   }
   &-icon {
-    background-color: black;
     width: 30px;
     height: 30px;
 
@@ -38,23 +37,19 @@
       position: absolute;
     }
     &:first-child {
-      background-color: red;
       position: absolute;
       top: -39px;
       left: -65px;
     }
     &:nth-child(2) {
-      background-color: green;
       top: 35px;
       left: -29px;
     }
     &:nth-child(3) {
-      background-color: rgb(255, 0, 0);
       top: -39px;
       right: -65px;
     }
     &:last-child {
-      background-color: green;
 
       top: 35px;
       right: -29px;
@@ -62,5 +57,11 @@
   }
   &-box {
     position: relative;
+  }
+  &-cross {
+    width: 35px;
+    height: 35px;
+    fill: #000;
+    stroke: #000;
   }
 }
