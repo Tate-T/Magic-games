@@ -57,5 +57,9 @@
         height: 1px;
 
         background-color: $black-color;
+
+        &--hidden {
+            display: none;
+        }
     }
 }
