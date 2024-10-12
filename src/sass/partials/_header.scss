@@ -10,6 +10,7 @@
     &__navigation {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__logo {
@@ -54,15 +55,18 @@
         }
     }
 
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 916px;
+    }
+
     &__list {
         display: flex;
         align-items: center;
+        width: 370px;
         gap: 50px;
-        margin-right: 344px;
-
-        &:first-child {
-            width: 96px;
-        }
 
         &-item {
             position: relative;
@@ -142,10 +146,16 @@
         font-weight: 400;
     }
 
+    &__greeting-box {
+        display: flex;
+        align-items: center;
+        gap: 51px;
+    }
+
     &__theme {
         display: inline-flex;
+        justify-content: flex-end;
         position: relative;
-        margin-right: 51px;
 
         width: 40px;
         height: 20px;
@@ -233,7 +243,6 @@
     &__greeting {
         display: flex;
         justify-content: flex-end;
-        gap: 4px;
 
         color: #000;
         text-align: right;

@@ -9,42 +9,46 @@
         <p class="header__logo-second-title">Magic</p>
       </div>
     </a>
-    <ul class="header__list">
-      <li class="header__list-item">
-        <a class="header__list-item-link" id="header-link" href="#">
-          <span>Інтерактив</span>
-          <svg class="header__list-item-menu-arrow">
-            <use href="../images/sprite.svg#menu-arrow"></use>
-          </svg>
-          <ul class="header__interactives-list">
-            <li class="header__interactives-item">
-              <a class="header__interactives-link" href="#leap-year">Числовий</a>
-            </li>
-            <li class="header__interactives-item">
-              <a class="header__interactives-link" href="#dino-section">Ігровий</a>
-            </li>
-            <li class="header__interactives-item">
-              <a class="header__interactives-link" href="#slider">Ознайомчий</a>
-            </li>
-          </ul>
-        </a>
-      </li>
-      <li class="header__list-item">
-        <a class="header__list-item-link" href="#">Наша команда</a>
-      </li>
-      <li class="header__list-item">
-        <a class="header__list-item-link" href="#">Контакти</a>
-      </li>
-    </ul>
-    <label class="header__theme">
-        <input class="header__theme-changer" type="checkbox"></input>
-        <span class="header__theme-slider">
-          <img class="header__theme-icon header__theme-icon-sun" src="../images/sun-icon.webp" alt="Light theme" value="light">
-          <img class="header__theme-icon header__theme-icon-moon" src="../images/moon-icon.webp" alt="Black theme" value="dark">
-        </span>
-    </label>
-    <p class="header__greeting">
-      Вітаємо, <span><span class="header__greeting-user-name">User</span>!</span>
-    </p>
+    <div class="header__box">
+      <ul class="header__list">
+        <li class="header__list-item">
+          <a class="header__list-item-link" id="header-link" href="#">
+            <span>Інтерактив</span>
+            <svg class="header__list-item-menu-arrow">
+              <use href="../images/sprite.svg#menu-arrow"></use>
+            </svg>
+            <ul class="header__interactives-list">
+              <li class="header__interactives-item">
+                <a class="header__interactives-link" href="#leap-year">Числовий</a>
+              </li>
+              <li class="header__interactives-item">
+                <a class="header__interactives-link" href="#dino-section">Ігровий</a>
+              </li>
+              <li class="header__interactives-item">
+                <a class="header__interactives-link" href="#slider">Ознайомчий</a>
+              </li>
+            </ul>
+          </a>
+        </li>
+        <li class="header__list-item">
+          <a class="header__list-item-link" href="#">Наша команда</a>
+        </li>
+        <li class="header__list-item">
+          <a class="header__list-item-link" href="#">Контакти</a>
+        </li>
+      </ul>
+      <div class="header__greeting-box">
+        <label class="header__theme">
+            <input class="header__theme-changer" type="checkbox"></input>
+            <span class="header__theme-slider">
+              <img class="header__theme-icon header__theme-icon-sun" src="../images/sun-icon.webp" alt="Light theme" value="light">
+              <img class="header__theme-icon header__theme-icon-moon" src="../images/moon-icon.webp" alt="Black theme" value="dark">
+            </span>
+        </label>
+        <p class="header__greeting">
+          Вітаємо<span><span class="header__greeting-user-name" id="header-user-name"></span>!</span>
+        </p>
+      </div>
+    </div>
   </nav>
 </header>

@@ -85,6 +85,7 @@ const scientists = [
   },
 ];
 
+const html = document.querySelector("html")
 const blocksArr = document.querySelectorAll(".scientists__block");
 const textsArr = document.querySelectorAll(".scientists__text");
 const namesArr = document.querySelectorAll(".scientists__name");
@@ -206,7 +207,6 @@ fourthButtonEl.addEventListener("click", () => {
 
 fifthButtonEl.addEventListener("click", () => {
   clearClassesAndStyles();
-  console.log("test2");
 
   const scientistBorn1879 = scientists.filter(
     (scientist) => scientist.born === 1879
