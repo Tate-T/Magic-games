@@ -63,7 +63,6 @@
     line-height: normal;
   }
   &-icon {
-    background-color: black;
     width: 30px;
     height: 30px;
 
@@ -74,23 +73,19 @@
       position: absolute;
     }
     &:first-child {
-      background-color: red;
       position: absolute;
       top: -110px;
       left: -21px;
     }
     &:nth-child(2) {
-      background-color: green;
       top: -33px;
       left: 0;
     }
     &:nth-child(3) {
-      background-color: rgb(255, 0, 0);
       top: -110px;
       right: -21px;
     }
     &:last-child {
-      background-color: green;
 
       top: -33px;
       right: 0;
@@ -108,9 +103,15 @@
     background-color: transparent;
   }
   &-cross {
-    background-color: blue;
-    width: 15px;
-    height: 15px;
+    // background-color: blue;
+    width: 35px;
+    height: 35px;
+    // z-index: 999;
+    // position: relative;
+    // display: block;
+    fill: #000;
+    stroke: #000;
+    // border:solid 2px #000;
   }
 }
 .no-scroll {
