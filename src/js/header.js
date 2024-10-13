@@ -72,6 +72,8 @@ const headerInteractivesLinkEl = document.querySelector(
   ".header__interactives-link"
 );
 
+const mainButtonEl = document.querySelector("#main-button");
+
 const numericalButtonEl = document.querySelector("#numerical-button");
 const numericalSectionsArr = document.querySelectorAll("#numerical");
 const biggestNumberLineEl = document.querySelector(".biggest-number__line");
@@ -99,6 +101,20 @@ function operationsHeaderList() {
 operationsHeaderList();
 
 function filterSections() {
+  mainButtonEl.addEventListener("click", () => {
+    numericalSectionsArr.forEach((numericalSection) => {
+      numericalSection.style.display = "block";
+    });
+
+    gameSectionsArr.forEach((gameSection) => {
+      gameSection.style.display = "block";
+    });
+
+    acquaintanceSectionsArr.forEach((acquaintanceSection) => {
+      acquaintanceSection.style.display = "block";
+    });
+  });
+
   numericalButtonEl.addEventListener("click", () => {
     numericalSectionsArr.forEach((numericalSection) => {
       numericalSection.style.display = "block";
@@ -114,6 +130,10 @@ function filterSections() {
 
     acquaintanceSectionsArr.forEach((acquaintanceSection) => {
       acquaintanceSection.style.display = "none";
+    });
+
+    headerInteractivesLinkEl.addEventListener("click", () => {
+      headerListInteractivesEl.classList.remove("header__interactives-list-show");
     });
   });
 
@@ -131,6 +151,8 @@ function filterSections() {
     acquaintanceSectionsArr.forEach((acquaintanceSection) => {
       acquaintanceSection.style.display = "none";
     });
+
+    headerListInteractivesEl.classList.remove("header__interactives-list-show");
   });
 
   acquaintanceButtonEl.addEventListener("click", () => {
@@ -145,6 +167,8 @@ function filterSections() {
     numericalSectionsArr.forEach((numericalSection) => {
       numericalSection.style.display = "none";
     });
+
+    headerListInteractivesEl.classList.remove("header__interactives-list-show");
   });
 }
 
