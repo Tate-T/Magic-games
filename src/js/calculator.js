@@ -30,6 +30,9 @@ const calcResult = () => {
       }
     }
   }
+
+  num1El.value = "";
+  num2El.value = "";
 };
 
 equalsBtnEl.addEventListener("click", calcResult);
