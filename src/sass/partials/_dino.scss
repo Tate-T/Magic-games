@@ -55,13 +55,13 @@
   &__cactus {
     position: absolute;
     bottom: 0;
-    right: -40px;
+    left: 720px;
     width: 20px;
     height: 40px;
     background-image: url("../../images/cactus.webp");
     background-size: cover;
     animation: moveCactus 1.3s linear infinite paused;
-  }
+  } 
 
   &__button {
     position: absolute;
@@ -83,10 +83,10 @@
 
 @keyframes moveCactus {
   0% {
-    right: -40px;
+      left: 720px; 
   }
   100% {
-    right: 100%;
+      left: -40px; 
   }
 }
 
