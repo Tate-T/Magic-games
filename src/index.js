@@ -11,3 +11,4 @@ import "./js/time-calculator";
 import "./js/soccer";
 import "./js/biggest-number";
 import "./js/scientists";
+import "./js/scroll-to-top";
