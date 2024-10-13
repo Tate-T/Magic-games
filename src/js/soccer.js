@@ -50,7 +50,6 @@ function throwBall() {
 
         score ++;
         footballScore.textContent = `${score}`;
-        console.log("Гол!");
       }
     }
 

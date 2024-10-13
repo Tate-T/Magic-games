@@ -25,7 +25,6 @@ starterForm.addEventListener("submit", (e) => {
   } else {
     e.preventDefault();
     userName = starterInput.value;
-    console.log(userName)
     starterInput.classList.remove("footer__input--wrong");
     starterButton.addEventListener("click", () => {
       e.preventDefault();
