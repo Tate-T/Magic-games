@@ -3,13 +3,12 @@ const footerInput = document.querySelector(".footer__input");
 const footerBackdrop = document.querySelector(".f__modal-backdrop");
 const footerExit = document.querySelector(".f__modal-close");
 const footerForm = document.querySelector(".footer__form");
-// console.log(footerInput)
+
 footerForm.addEventListener("submit", (e) => {
   if (footerInput.value === "") {
     e.preventDefault();
     footerInput.classList.add("footer__input--wrong");
     footerInput.placeholder = "Ви нічого не написали!";
-    // footerButton.classList.add('footer__button--wrong')
   }
   else if(footerInput.value.includes('@') === false) {
     e.preventDefault();
@@ -32,8 +31,5 @@ footerForm.addEventListener("submit", (e) => {
       });
   }
 
+  footerInput.value = "";
 });
-
-// footerButton.addEventListener('click', () => {
-//   footerBackdrop .classList.remove('is__hidden')
-// })

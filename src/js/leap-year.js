@@ -26,6 +26,6 @@ const leapYearFunction = document
       resultText.classList.add("leap-number__text--uncorrectly");
       resultText.classList.remove("leap-number__text--correctly");
     }
+
+    inputEl.value = "";
   });
-
-

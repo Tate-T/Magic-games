@@ -19,6 +19,8 @@ const guessNumber = () => {
       resultTextEl.textContent = `Ви програли, компютер загадав ${computerNumber}`;
     }
   }
+
+  inputEl.value = "";
 };
 
 btnEl.addEventListener("click", guessNumber);

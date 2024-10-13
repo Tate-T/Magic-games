@@ -4,21 +4,13 @@ const timeDays = document.querySelector(".time__days");
 const timeHours = document.querySelector(".time__hours");
 const timeMinutes = document.querySelector(".time__minutes");
 const timeSeconds = document.querySelector(".time__secs");
-console.log(timeButton);
+
 timeButton.addEventListener("click", () => {
-  // e.preventDefault();
-  // console.log('dd')
   if (!isNaN(parseInt(timeInput.value))) {
     const secs = Math.floor(Number(timeInput.value));
     const minutes = Math.floor(Number(timeInput.value / 60));
     const hours = Math.floor(Number(minutes / 60));
     const days = Math.floor(Number(hours / 24));
-
-    console.log(
-      `${days} ${Math.abs(hours - days * 24)} ${Math.abs(
-        minutes - hours * 60
-      )} ${Math.abs(secs - minutes * 60)} `
-    );
 
     timeSeconds.textContent = Math.abs(secs - minutes * 60);
     timeMinutes.textContent = Math.abs(minutes - hours * 60);
@@ -35,4 +27,6 @@ timeButton.addEventListener("click", () => {
       timeHours.textContent = `0${Math.abs(hours - days * 24)}`;
     }
   }
+
+  timeInput.value = "";
 });
