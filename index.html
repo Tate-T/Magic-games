@@ -35,7 +35,7 @@
             <img class="s__modal-icon" src="data:image/webp;base64,UklGRhoBAABXRUJQVlA4WAoAAAAQAAAAHQAAHQAAQUxQSM4AAAABgCPbtirldNS4xzyG4LGnZOT0ELC0ZQYUM7Dc3X0CP8MlpB+86GdUbfTVpUcQEROgiYD5S1558LHgI99g4oV+xZIqtp+Al508lA3aipvbObuOR4AFswUORnOPjBtVkbZLYywbteIlDXBqpCuKajpgxmoAQuDRWWnkmo8DJzOpoUY/zf70/H8aDWk0UFY0qaJ9ZWSapGyt3fxrn7t/bDKb5P2BRGaag8TZuQRCp90qySyhyWxi1am0JLPISgv02w3wPAE+Fnws5JV/wTxMCFZQOCAmAAAA0AIAnQEqHgAeAD6RRJ1KpaOioagIALASCWkAAD2joAD++M8awAA=" alt="">
         </div>
 
-        <button type="submit" class="s__modal-close">
+        <button type="submit" class="s__modal-close" aria-label="close modal">
             <svg class="s__modal-cross">
                 <use href="/Magic-games/assets/sprite-c7385404.svg#icon-close"></use>
             </svg>
@@ -115,7 +115,7 @@
           placeholder="Введіть рік народження"
           class="leap-year__input"
         />
-        <button class="leap-year__search" type="button">
+        <button class="leap-year__search" type="button" aria-label="button confirm">
           <svg class="leap-year__svg">
             <use href="/Magic-games/assets/sprite-c7385404.svg#search"></use>
           </svg>
@@ -136,7 +136,7 @@
           placeholder="Введіть число"
           class="computer-number__input"
         />
-        <button class="computer-number__search-bg">
+        <button class="computer-number__search-bg" aria-label="button confirm">
            <svg class="computer-number__icon">
              <use href="/Magic-games/assets/sprite-c7385404.svg#search"></use>
            </svg>
@@ -197,39 +197,47 @@
       />
       <ul class="calculator__list">
         <li class="calculator__item">
-          <input
-            type="radio"
-            name="operations"
-            data-operation="+"
-            class="calculator__radio"
-          />
+          <label>
+            <input
+              type="radio"
+              name="operations"
+              data-operation="+"
+              class="calculator__radio"
+            />
+          </label>
           <button class="calculator__btn">+</button>
         </li>
         <li class="calculator__item">
-          <input
-            type="radio"
-            name="operations"
-            data-operation="*"
-            class="calculator__radio"
-          />
+          <label>
+            <input
+              type="radio"
+              name="operations"
+              data-operation="*"
+              class="calculator__radio"
+            />
+          </label>
           <button class="calculator__btn">*</button>
         </li>
         <li class="calculator__item">
-          <input
-            type="radio"
-            name="operations"
-            data-operation="-"
-            class="calculator__radio"
-          />
+          <label>
+            <input
+              type="radio"
+              name="operations"
+              data-operation="-"
+              class="calculator__radio"
+            />
+          </label>
           <button class="calculator__btn">-</button>
         </li>
         <li class="calculator__item">
-          <input
-            type="radio"
-            name="operations"
-            data-operation="/"
-            class="calculator__radio"
-          />
+          <label>
+            <input
+              type="radio"
+              name="operations"
+              data-operation="/"
+              class="calculator__radio"
+            />
+          </label>
           <button class="calculator__btn">/</button>
         </li>
       </ul>
@@ -250,7 +258,7 @@
     <div class="time__box">
       <form class="time__form">
         <input placeholder="Введіть секунди" class="time__input" />
-        <button class="time__button" type="button">
+        <button class="time__button" type="button" aria-label="button confirm">
             <svg class="time__icon">
                 <use href="/Magic-games/assets/sprite-c7385404.svg#search"></use>
             </svg>
@@ -352,7 +360,7 @@
   <div class="container">
     <h2 id="our-team-anchor" class="slider__title">Наша команда</h2>
     <div class="slider__flex">
-      <button class="slider__btn slider__btn--left">
+      <button class="slider__btn slider__btn--left" aria-label="slide to left">
         <svg class="slider__icon">
           <use href="/Magic-games/assets/sprite-c7385404.svg#slider-arrow-left"></use>
         </svg>
@@ -360,7 +368,7 @@
       <ul class="slider__photos">
         <li class="slider__photo">
           <div class="slider__img">
-            <img src="/Magic-games/assets/dima-b5a883ac.webp" alt="dimas photo" class="slider__img--dima">
+            <img src="/Magic-games/assets/dima-f58696d4.webp" alt="dimas photo" class="slider__img--dima">
           </div>
         </li>
         <li class="slider__photo">
@@ -380,7 +388,7 @@
         </li>
       </ul>
       <div class="slider__photo"></div>
-      <button class="slider__btn slider__btn--right">
+      <button class="slider__btn slider__btn--right" aria-label="slide to right">
         <svg class="slider__icon">
           <use href="/Magic-games/assets/sprite-c7385404.svg#slider-arrow-right"></use>
         </svg>
