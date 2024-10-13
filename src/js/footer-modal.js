@@ -30,6 +30,4 @@ footerForm.addEventListener("submit", (e) => {
         document.body.classList.remove("no-scroll");
       });
   }
-
-  footerInput.value = "";
 });
