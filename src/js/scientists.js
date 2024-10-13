@@ -179,8 +179,6 @@ thirdButtonEl.addEventListener("click", () => {
     `;
   }
 
-  console.log(sortedScientistsYears);
-
   document.querySelector(".scientists__blocks-list").innerHTML = scientistYearsCards;
 
   buttonsArr.forEach((button, index) => {
