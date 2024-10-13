@@ -9,7 +9,7 @@ const headerGreetingEl = document.querySelector(".header__greeting");
 
 document.body.classList.add("no-scroll");
 
-let userName = ''
+let userName = '';
 
 starterExit.addEventListener("click", () => {
   startBackdrop.classList.add("is__hidden");

@@ -1,5 +1,10 @@
 const stadium = document.querySelector(".football__stadium");
 const ball = document.querySelector(".football__stadium-ball");
+const arch = document.querySelector(".football__stadium-gates");
+
+const footballModalEl = document.querySelector(".football__modal-backdrop");
+const footballModalExit = document.querySelector(".football__modal-close");
+const footballScore = document.querySelector(".score");
 
 function throwBall() {
   stadium.addEventListener("click", (e) => {
@@ -31,17 +36,53 @@ function throwBall() {
     }
 
     if (ballCords.left + ball.clientWidth > stadium.clientWidth) {
-      ballCords = stadium.clientWidth - ball.clientWidth;
+      ballCords.left = stadium.clientWidth - ball.clientWidth;
     }
 
     if (ballCords.top + ball.clientHeight > stadium.clientHeight) {
       ballCords.top = stadium.clientHeight - ball.clientHeight;
     }
 
+    function checkGoal() {
+      if ((ballCords.left >= 630 && ballCords.top >= 65 && ballCords.top <= 110)) {
+        document.body.classList.add("no-scroll");
+        footballModalEl.classList.remove("is__hidden");
+
+        score ++;
+        footballScore.textContent = `${score}`;
+        console.log("Гол!");
+      }
+    }
+
+    checkGoal();
+
     ball.style.left = `${ballCords.left}px`;
     ball.style.top = `${ballCords.top}px`;
+
+    footballModalExit.addEventListener("click", (e) => {
+      e.preventDefault();
+      document.body.classList.remove("no-scroll");
+      footballModalEl.classList.add("is__hidden");
+
+      const allBallCoords = [
+        { left: '100px', top: '75px' },
+        { left: '250px', top: '35px' },
+        { left: '250px', top: '140px' }
+      ];
+
+      const maxIndex = allBallCoords.length - 1;
+      const minIndex = 0;
+
+      const randomIndex = Math.round(Math.random() * (maxIndex - minIndex) + minIndex);
+
+      const randomCoords = allBallCoords[randomIndex];
+
+      ball.style.left = randomCoords.left;
+      ball.style.top = randomCoords.top;
+    });
   });
 }
 
-throwBall();
+let score = 0;
 
+throwBall();
