@@ -36,6 +36,17 @@ body {
   transition: all 300ms ease-in-out;
 }
 
+.dark-mode .football__modal-title {
+  color: #000000;
+}
+
+.dark-mode .dino__modal-title {
+  color: #000000;
+}
+
+.dark-mode .footer__modal-title {
+  color: #000000;
+}
 
 .dark-mode a {
   color: #ffffff;
