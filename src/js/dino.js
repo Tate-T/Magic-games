@@ -38,6 +38,7 @@ function startGame() {
       dinoBottom < cactusHeight
     ) {
       alert("Game Over!");
+      
       clearInterval(gameLoop);
       location.reload();
     }
