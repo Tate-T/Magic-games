@@ -30,6 +30,15 @@ body {
   transition: all 600ms ease-in-out;
 }
 
+.dark-mode .scroll {
+  border: 3px solid #fff;
+  background-color: #000;
+
+  &__icon {
+    fill: #fff;
+  }
+}
+
 .dark-mode header {
   background-color: #000000;
   color: #ffffff;
