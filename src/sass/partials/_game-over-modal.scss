@@ -1,0 +1,68 @@
+.go__modal {
+    width: 463px;
+    background-color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+    position: relative;
+    padding: 83px 138px 138px 138px;
+  
+    &-close {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      background-color: transparent;
+    }
+  
+    
+  
+    &-title {
+      text-align: center;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &-icon {
+      width: 30px;
+      height: 30px;
+  
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3),
+      &:last-child {
+        position: absolute;
+      }
+      &:first-child {
+        position: absolute;
+        top: -39px;
+        left: -65px;
+      }
+      &:nth-child(2) {
+        top: 35px;
+        left: -29px;
+      }
+      &:nth-child(3) {
+        top: -39px;
+        right: -65px;
+      }
+      &:last-child {
+  
+        top: 35px;
+        right: -29px;
+      }
+    }
+    &-box {
+      position: relative;
+    }
+    &-cross {
+      width: 35px;
+      height: 35px;
+      fill: #000;
+      stroke: #000;
+    }
+  }
+  
