@@ -47,7 +47,7 @@
     left: 50px;
     width: 40px;
     height: 40px;
-    background-image: url("../../images/dinosaur.webp");
+    background-image: url("../images/dinosaur.webp");
     background-size: cover;
     transition: bottom 0.3s; 
   }
@@ -58,7 +58,7 @@
     left: 720px;
     width: 20px;
     height: 40px;
-    background-image: url("../../images/cactus.webp");
+    background-image: url("../images/cactus.webp");
     background-size: cover;
     animation: moveCactus 1.3s linear infinite paused;
   } 
