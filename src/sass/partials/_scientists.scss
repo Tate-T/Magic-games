@@ -54,7 +54,6 @@
     &__buttons-couple {
         display: flex;
         justify-content: center;
-        align-items: center;
         gap: 36px;
 
         margin-bottom: 20px;
@@ -63,14 +62,9 @@
     &__buttons-column {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
         gap: 36px;
 
         width: 441px;
-    }
-
-    &__buttons-column:first-child {
-        height: 230px;
     }
 
     &__buttons-column:first-child &__buttons-item {
@@ -98,13 +92,17 @@
         text-align: left;
     }
 
+    &__buttons-column > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
     &__button {
         display: flex;
-        justify-content: center;
         padding: 10px 20px;
         gap: 10px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
 
         color: $white-color;
         text-align: right;
@@ -116,14 +114,14 @@
         background: $black-color;
         box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
 
-        &:first-child {
-            margin-left: auto;
-        }
-
         &--close {
             background-color: #414141;
             cursor: wait;
             transition: all 500ms ease-in-out;
         }
+    }
+
+    &__buttons-couple > li:first-child &__button {
+        margin-left: auto;
     }
 }
