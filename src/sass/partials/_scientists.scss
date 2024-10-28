@@ -44,10 +44,13 @@
         font-weight: 400;
         line-height: 13.6px;
         opacity: 0;
+        
         transition: all 500ms ease;
 
         &--show {
             opacity: 1;
+
+            transition: all 500ms ease;
         }
     }
 
@@ -113,12 +116,6 @@
         border-radius: 20px;
         background: $black-color;
         box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
-
-        &--close {
-            background-color: #414141;
-            cursor: wait;
-            transition: all 500ms ease-in-out;
-        }
     }
 
     &__buttons-couple > li:first-child &__button {

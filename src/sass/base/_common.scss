@@ -185,14 +185,8 @@ body {
 .dark-mode .scientists__button {
   padding: 10px 19px;
   border: none;
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.dark-mode .scientists__button--close {
-  padding: 10px 19px;
-  border: none;
-  background-color: #414141;
+  background-color: #000000;
+  border: solid 1px #ffffff;
   color: #ffffff;
 }
 
