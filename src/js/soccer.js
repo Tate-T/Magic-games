@@ -85,3 +85,7 @@ function throwBall() {
 let score = 0;
 
 throwBall();
+
+if (document.body.classList.contains("dark-mode")) {
+  document.querySelector(`href="./images/sprite.svg#icon-close"`).href = "./images/sprite.svg#icon-close-white";
+}

@@ -123,6 +123,16 @@ body {
   border: solid 1px #ffffff;
 }
 
+.dark-mode .rps__item {
+  transition: all 3000ms ease-in-out;
+}
+
+.dark-mode .rps__item-score {
+  background-color: #000;
+
+  transition: all 3000ms ease-in-out;
+}
+
 .dark-mode .rps__btn {
   border: solid 1px #ffffff;
 
@@ -175,15 +185,104 @@ body {
 .dark-mode .scientists__button {
   padding: 10px 19px;
   border: none;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  border: solid 1px #ffffff;
+  color: #ffffff;
 }
 
-.dark-mode .scientists__button--close {
-  padding: 10px 19px;
-  border: none;
-  background-color: #414141;
-  color: #ffffff;
+.dark-mode .dino__modal {
+  background-color: #000000;
+  border: solid 3px #ffffff;
+
+  &-title {
+    color: #ffffff;
+  }
+
+  &-icon {
+    &:first-child {
+      background-image: url(../images/dark-mode-sword.webp);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../images/dark-mode-puzzle.webp);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../images/dark-mode-console.webp);
+    }
+
+    &:last-child {
+      background-image: url(../images/dark-mode-game.webp);
+    }
+  }
+
+  &-cross {
+    background-image: url(../images/dark-mode-icon-close.webp);
+  }
+}
+
+.dark-mode .football__modal {
+  background-color: #000000;
+  border: solid 3px #ffffff;
+
+  &-title {
+    color: #ffffff;
+  }
+
+  &-icon {
+    &:first-child {
+      background-image: url(../images/dark-mode-sword.webp);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../images/dark-mode-puzzle.webp);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../images/dark-mode-console.webp);
+    }
+
+    &:last-child {
+      background-image: url(../images/dark-mode-game.webp);
+    }
+  }
+
+  &-cross {
+    background-image: url(../images/dark-mode-icon-close.webp);
+  }
+}
+
+.dark-mode .f__modal {
+  width: 469px;
+
+  background-color: #000000;
+  border: solid 3px #ffffff;
+
+  &-title {
+    color: #ffffff;
+  }
+
+  &-icon {
+    &:first-child {
+      background-image: url(../images/dark-mode-sword.webp);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../images/dark-mode-puzzle.webp);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../images/dark-mode-console.webp);
+    }
+
+    &:last-child {
+      background-image: url(../images/dark-mode-game.webp);
+    }
+  }
+
+  &-cross {
+    background-image: url(../images/dark-mode-icon-close.webp);
+  }
 }
 
 .dark-mode .header__interactives-list {

@@ -81,6 +81,10 @@
     transform: translateX(104px);
   }
 
+  &__item-score {
+    transition: all 100ms ease-in-out;
+  }
+
   &__btn-choice{
     background-color: #000;
       padding: 10px;

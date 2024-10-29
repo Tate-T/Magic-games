@@ -103,10 +103,15 @@ const eighthButtonEl = document.querySelector("#scientists-button8");
 const ninthButtonEl = document.querySelector("#scientists-button9");
 
 const clearClassesAndStyles = () => {
-  textsArr.forEach((textEl, index) => {
+  textsArr.forEach((textEl) => {
     textEl.classList.remove("scientists__text--show");
-    blocksArr[index].style.background = "#D9D9D9";
   });
+
+  if (document.body.classList.contains("dark-mode")) {
+    textsArr.forEach((textEl) => {
+      textEl.classList.remove("scientists__text--show");
+    });
+  }
 };
 
 firstButtonEl.addEventListener("click", () => {
@@ -116,14 +121,21 @@ firstButtonEl.addEventListener("click", () => {
     (scientist) => scientist.born >= 1801 && scientist.born <= 1900
   );
 
+  const arrCopy = [...textsArr];
+
+  scientists19St = scientists.filter(
+    (scientist) => scientist.born >= 1801 && scientist.born <= 1900
+  );
+
   scientists19St.forEach((scientist) => {
     namesArr.forEach((nameEl, index) => {
       if (
         nameEl.textContent.includes(scientist.name) &&
         nameEl.textContent.includes(scientist.surname)
       ) {
-        textsArr[index].classList.add("scientists__text--show");
-        blocksArr[index].style.background = "#CACACA";
+        setTimeout(() => {
+          arrCopy[index].classList.add("scientists__text--show");
+        }, 200);
       }
     });
   });
@@ -132,59 +144,36 @@ firstButtonEl.addEventListener("click", () => {
 secondButtonEl.addEventListener("click", () => {
   clearClassesAndStyles();
 
-  const sortedScientists = [...scientists].sort((a, b) =>
-    a.name.localeCompare(b.name)
-  );
+  const arrCopy = [...textsArr];
 
-  const scientistCards = sortedScientists
-    .map(
-      (scientist) => `
-    <div class="scientists__block" style="background: #CACACA;">
-        <p class="scientists__text" style="opacity: 1;">
-            <span class="scientists__name">${scientist.name} ${scientist.surname}</span>
-            <span class="scientists__year">${scientist.born}-${scientist.dead}</span>
-        </p>
-    </div>
-    `
-    )
-    .join("");
+  arrCopy.sort((a, b) => a.getAttribute("name").localeCompare(b.getAttribute("name")));
 
-  document.querySelector(".scientists__blocks-list").innerHTML = scientistCards;
+  blocksArr.forEach((element, index) => {
+    element.append(arrCopy[index]);
 
-  buttonsArr.forEach((button, index) => {
-    if (index !== -1) {
-      button.classList.add("scientists__button--close");
-    }
+    setTimeout(() => {
+      textsArr.forEach((textEl) => {
+        textEl.classList.add("scientists__text--show");
+      });
+    }, 200);
   });
 });
 
 thirdButtonEl.addEventListener("click", () => {
   clearClassesAndStyles();
 
-  const scientistsYears = scientists.map((scientist) => scientist.dead - scientist.born);
+  const arrCopy = [...textsArr];
 
-  const sortedScientistsYears = [...scientistsYears].sort((a, b) => a - b);
+  arrCopy.sort((nextEl, currentEl) => Number((currentEl.getAttribute('dead')) - (currentEl.getAttribute('born'))) - ((nextEl.getAttribute('dead')) - (nextEl.getAttribute('born'))));
 
-  let scientistYearsCards = ""; 
+  blocksArr.forEach((element, index) => {
+    element.append(arrCopy[index]);
 
-  for (const scientistYear of sortedScientistsYears) {
-    const scientist = scientists.find(scientist => scientist.dead - scientist.born === scientistYear);
-    scientistYearsCards += `
-      <div class="scientists__block" style="background: #CACACA;">
-        <p class="scientists__text" style="opacity: 1;">
-          <span class="scientists__name">${scientist.name} ${scientist.surname}</span>
-          <span class="scientists__year">${scientist.born}-${scientist.dead}</span>
-        </p>
-      </div>
-    `;
-  }
-
-  document.querySelector(".scientists__blocks-list").innerHTML = scientistYearsCards;
-
-  buttonsArr.forEach((button, index) => {
-    if (index !== -1) {
-      button.classList.add("scientists__button--close");
-    }
+    setTimeout(() => {
+      textsArr.forEach((textEl) => {
+        textEl.classList.add("scientists__text--show");
+      });
+    }, 200);
   });
 });
 
@@ -198,8 +187,9 @@ fourthButtonEl.addEventListener("click", () => {
   const index = scientists.findIndex(scientist => scientist === latestBornScientist);
 
   if (index !== -1) {
-    textsArr[index].classList.add("scientists__text--show");
-    blocksArr[index].style.background = "#CACACA";
+    setTimeout(() => {
+      textsArr[index].classList.add("scientists__text--show");
+    }, 200);
   }
 });
 
@@ -213,8 +203,9 @@ fifthButtonEl.addEventListener("click", () => {
   scientistBorn1879.forEach((scientist) => {
     yearsArr.forEach((yearEl, index) => {
       if (yearEl.textContent.includes(scientist.born.toString())) {
-        textsArr[index].classList.add("scientists__text--show");
-        blocksArr[index].style.background = "#CACACA";
+        setTimeout(() => {
+          textsArr[index].classList.add("scientists__text--show");
+        }, 200);
       }
     });
   });
@@ -229,8 +220,9 @@ sixthButtonEl.addEventListener("click", () => {
 
   scientistsSurnamesC.forEach((scientist, index) => {
     if (scientist.surname.startsWith("C")) {
-      textsArr[index].classList.add("scientists__text--show");
-      blocksArr[index].style.background = "#CACACA";
+      setTimeout(() => {
+        textsArr[index].classList.add("scientists__text--show");
+      }, 200);
     }
   });
 });
@@ -244,8 +236,9 @@ seventhButtonEl.addEventListener("click", () => {
 
   scientistsNameNotA.forEach((scientist, index) => {
     if (!scientist.name.startsWith("A")) {
-      textsArr[index].classList.add("scientists__text--show");
-      blocksArr[index].style.background = "#CACACA";
+      setTimeout(() => {
+        textsArr[index].classList.add("scientists__text--show");
+      }, 200);
     }
   });
 });
@@ -264,8 +257,9 @@ eighthButtonEl.addEventListener("click", () => {
   const oldestIndexScientist = scientists.findIndex(scientist => scientist === oldestScientist);
 
   if (oldestIndexScientist !== -1) {
-    textsArr[oldestIndexScientist].classList.add("scientists__text--show");
-    blocksArr[oldestIndexScientist].style.background = "#CACACA";
+    setTimeout(() => {
+      textsArr[oldestIndexScientist].classList.add("scientists__text--show");
+    }, 200);
   }
 
   ///////////////////////////////////
@@ -277,8 +271,9 @@ eighthButtonEl.addEventListener("click", () => {
   const smallestIndexScientist = scientists.findIndex(scientist => scientist === smallestScientist);
 
   if (smallestIndexScientist !== -1) {
-    textsArr[smallestIndexScientist].classList.add("scientists__text--show");
-    blocksArr[smallestIndexScientist].style.background = "#CACACA";
+    setTimeout(() => {
+      textsArr[smallestIndexScientist].classList.add("scientists__text--show");
+    }, 200);
   }
 });
 
@@ -294,8 +289,9 @@ ninthButtonEl.addEventListener("click", () => {
   for (const scientist of scientistsMatchingLetters) {
     const scientistIndex = scientists.findIndex(currentScientist => currentScientist === scientist);
     if (scientistIndex !== -1) {
-      textsArr[scientistIndex].classList.add("scientists__text--show");
-      blocksArr[scientistIndex].style.background = "#CACACA";
+      setTimeout(() => {
+        textsArr[scientistIndex].classList.add("scientists__text--show");
+      }, 200);
     }
   }
 });

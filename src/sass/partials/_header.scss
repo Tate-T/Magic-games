@@ -150,7 +150,8 @@
     &__greeting-box {
         display: flex;
         align-items: center;
-        gap: 51px;
+
+        width: 200px;
     }
 
     &__theme {
@@ -160,6 +161,7 @@
 
         width: 40px;
         height: 20px;
+        margin-right: auto;
 
         border-radius: 11px;
         background: $grey-color;
