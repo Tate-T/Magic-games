@@ -20,38 +20,38 @@ starterExit.addEventListener("click", () => {
 starterForm.addEventListener("submit", (e) => {
   if (starterInput.value === "") {
     e.preventDefault();
+
     starterInput.classList.add("footer__input--wrong");
     starterInput.placeholder = "Ви нічого не написали!";
   } else {
     e.preventDefault();
+
     userName = starterInput.value;
+
     starterInput.classList.remove("footer__input--wrong");
+
     starterButton.addEventListener("click", () => {
       e.preventDefault();
+
       startBackdrop.classList.add("is__hidden");
       document.body.classList.remove("no-scroll");
 
       headerNameUserEl.textContent = `, ${userName}`;
 
-      if (userName.length >= 50) {
-        headerGreetingEl.style = "font-size: 8px;";
+      function checkUserName(userName) {
+        let userNameArray = userName.split("");
+    
+        if (userName.length > 10) {
+          userNameArray = userNameArray.slice(0, 10);
+          userNameArray.pop(" ");
+          userNameArray.push("...");
+          userNameArray = userNameArray.join("");
 
-        if (userName.length >= 60) {
-          headerGreetingEl.style = "font-size: 7px;";
-
-          if (userName.length >= 70) {
-            headerGreetingEl.style = "font-size: 6px;";
-
-            if (userName.length >= 90) {
-              headerGreetingEl.style = "font-size: 5px;";
-
-              if (userName.length >= 100) {
-                headerGreetingEl.style = "font-size: 4px;";
-              }
-            }
-          }
+          headerNameUserEl.textContent = `, ${userNameArray}`;
         }
       }
+    
+      checkUserName(userName);
     });
   }
 });
