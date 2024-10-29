@@ -49,6 +49,22 @@ body {
   color: #000000;
 }
 
+.dark-mode .football__info-text {
+  color: #000000;
+}
+
+.dark-mode .football__info-button {
+  background-color: #000000;
+
+  &-icon {
+    background-image: url(../images/dark-mode-icon-info.webp);
+  }
+}
+
+.dark-mode .football__stadium-time {
+  color: #000000;
+}
+
 .dark-mode .dino__modal-title {
   color: #000000;
 }
@@ -101,10 +117,6 @@ body {
 .dark-mode h2 {
   color: #ffffff;
 }
-
-// .dark-mode button {
-//   border: solid 0.5px #ffffff;
-// }
 
 .dark-mode .slider__icon {
   stroke: #ffffff;

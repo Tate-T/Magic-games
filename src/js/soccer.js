@@ -6,8 +6,25 @@ const footballModalEl = document.querySelector(".football__modal-backdrop");
 const footballModalExit = document.querySelector(".football__modal-close");
 const footballScore = document.querySelector(".score");
 
+let isPaused = true;
+
+function addPause() {
+  isPaused = false;
+}
+
+function removePause() {
+  isPaused = !isPaused;
+}
+
+function togglePause() {
+  if (isPaused) {
+    removePause();
+  }
+}
+
 function throwBall() {
   stadium.addEventListener("click", (e) => {
+    addPause();
     let stadiumCords = stadium.getBoundingClientRect();
 
     let ballCords = {
@@ -45,6 +62,7 @@ function throwBall() {
 
     function checkGoal() {
       if ((ballCords.left >= 630 && ballCords.top >= 65 && ballCords.top <= 110)) {
+        removePause();
         document.body.classList.add("no-scroll");
         footballModalEl.classList.remove("is__hidden");
 
@@ -60,6 +78,7 @@ function throwBall() {
 
     footballModalExit.addEventListener("click", (e) => {
       e.preventDefault();
+      addPause();
       document.body.classList.remove("no-scroll");
       footballModalEl.classList.add("is__hidden");
 
@@ -86,6 +105,49 @@ let score = 0;
 
 throwBall();
 
-if (document.body.classList.contains("dark-mode")) {
-  document.querySelector(`href="./images/sprite.svg#icon-close"`).href = "./images/sprite.svg#icon-close-white";
+function showInfo() {
+  const footballInfoButton = document.querySelector(".football__info-button");
+  const footballInfoText = document.querySelector(".football__info-text");
+
+  footballInfoButton.addEventListener("click", () => {
+    footballInfoText.classList.toggle("football__info-text--show");
+  });
 }
+
+showInfo()
+
+function gameTime() {
+  const footballMinutes = document.querySelector(".time-minutes");
+  const footballSeconds = document.querySelector(".time-seconds");
+
+  let minutes = 0;
+  let seconds = 0;
+
+  const secondsInterval = setInterval(() => {
+    if (!isPaused) {
+      footballSeconds.textContent = `0${seconds++}`;
+
+      if (seconds >= 10) {
+        footballSeconds.textContent = `${seconds}`;
+      }
+
+      if (seconds === 60) {
+        footballSeconds.textContent = `00`;
+        seconds = 1;
+        minutes++;
+
+        footballMinutes.textContent = `0${minutes++}`;
+
+        if (minutes >= 10) {
+          footballMinutes.textContent = `${minutes}`;
+        }
+      } 
+    }
+  }, 1000); 
+
+  if (footballModalEl.classList.contains(".is-hidden")) {
+    togglePause();
+  }
+}
+
+gameTime();
