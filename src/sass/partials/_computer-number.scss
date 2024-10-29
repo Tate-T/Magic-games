@@ -29,7 +29,10 @@
   }
 
   &__flex {
+    position: relative;
+
     margin: 0 auto;
+    padding: 0 350px 0 0;
 
     display: flex;
     justify-content: center;
@@ -78,17 +81,23 @@
   }
 
   &__text {
+    position: absolute;
+    top: 50%;
+    right: 300px;
+
+    transform: translateY(-50%);
+
     font-size: 12px;
-    margin: 0 0 0 220px;
+    // margin: 0 0 0 220px;
 
     &--correctly {
       color: #039900;
-      margin: 0 0 0 144px;
+      // margin: 0 0 0 144px;
     }
 
     &--uncorrectly {
       color: #df1515;
-      margin: 0 0 0 93px;
+      // margin: 0 0 0 93px;
     }
   }
 }
