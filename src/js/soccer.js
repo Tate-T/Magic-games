@@ -6,6 +6,15 @@ const footballModalEl = document.querySelector(".football__modal-backdrop");
 const footballModalExit = document.querySelector(".football__modal-close");
 const footballScore = document.querySelector(".score");
 
+const goalPlayer = document.getElementById("goal-player");
+const goalQuantity = document.getElementById("goal-quantity");
+const goalMinutes = document.getElementById("goal-minutes");
+const goalSeconds = document.getElementById("goal-seconds");
+
+const headerNameUserEl = document.querySelector("#header-user-name");
+const footballMinutes = document.querySelector(".time-minutes");
+const footballSeconds = document.querySelector(".time-seconds");
+
 let isPaused = true;
 
 function addPause() {
@@ -25,6 +34,7 @@ function togglePause() {
 function throwBall() {
   stadium.addEventListener("click", (e) => {
     addPause();
+
     let stadiumCords = stadium.getBoundingClientRect();
 
     let ballCords = {
@@ -63,11 +73,14 @@ function throwBall() {
     function checkGoal() {
       if ((ballCords.left >= 630 && ballCords.top >= 65 && ballCords.top <= 110)) {
         removePause();
+
         document.body.classList.add("no-scroll");
         footballModalEl.classList.remove("is__hidden");
 
         score ++;
         footballScore.textContent = `${score}`;
+
+        getGoalInfo();
       }
     }
 
@@ -107,10 +120,13 @@ throwBall();
 
 function showInfo() {
   const footballInfoButton = document.querySelector(".football__info-button");
+  const footballInfoButtonIcon = document.querySelector(".football__info-button-icon");
   const footballInfoText = document.querySelector(".football__info-text");
 
   footballInfoButton.addEventListener("click", () => {
     footballInfoText.classList.toggle("football__info-text--show");
+    footballInfoButtonIcon.classList.toggle("football__info-button-icon--show");
+    footballInfoButton.classList.toggle("football__info-button--show");
   });
 }
 
@@ -120,30 +136,22 @@ function gameTime() {
   const footballMinutes = document.querySelector(".time-minutes");
   const footballSeconds = document.querySelector(".time-seconds");
 
-  let minutes = 0;
-  let seconds = 0;
-
-  const secondsInterval = setInterval(() => {
+  setInterval(() => {
     if (!isPaused) {
-      footballSeconds.textContent = `0${seconds++}`;
-
-      if (seconds >= 10) {
-        footballSeconds.textContent = `${seconds}`;
-      }
-
-      if (seconds === 60) {
-        footballSeconds.textContent = `00`;
-        seconds = 1;
+      let minutes = parseInt(footballMinutes.textContent);
+      let seconds = parseInt(footballSeconds.textContent);
+  
+      seconds++;
+  
+      if (seconds >= 60) {
+        seconds = 0;
         minutes++;
-
-        footballMinutes.textContent = `0${minutes++}`;
-
-        if (minutes >= 10) {
-          footballMinutes.textContent = `${minutes}`;
-        }
-      } 
+      }
+  
+      footballSeconds.textContent = seconds.toString().padStart(2, '0');
+      footballMinutes.textContent = minutes.toString().padStart(2, '0');
     }
-  }, 1000); 
+  }, 1000);
 
   if (footballModalEl.classList.contains(".is-hidden")) {
     togglePause();
@@ -151,3 +159,15 @@ function gameTime() {
 }
 
 gameTime();
+
+function getGoalInfo() {
+  goalPlayer.textContent = headerNameUserEl.textContent.slice(2);
+  goalQuantity.textContent = `${footballScore.textContent}-ий`;
+  goalMinutes.textContent = `${footballMinutes.textContent}' `;
+  
+  if (footballMinutes.textContent === "00") {
+    goalMinutes.textContent = "";
+  }
+
+  goalSeconds.textContent = `${footballSeconds.textContent}"`;
+}
