@@ -1,16 +1,21 @@
 .scroll {
   position: fixed;
   right: 25px;
-  bottom: 50px;
+  bottom: -100vh;
 
   width: 45px;
   height: 45px;
   border-radius: 50%;
   border: 3px solid #000;
 
-  visibility: hidden;
-
   background-color: #fff;
+  opacity: 0.95;
+
+  transition: bottom 750ms ease-out, box-shadow 250ms ease;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
 
   &__link {
     width: 100%;
@@ -20,11 +25,10 @@
     justify-content: center;
     align-items: center;
   }
-  
-  &__icon {
-    width: 11px;
-    height: 7px;
 
-    transform: rotate(180deg);
+  &__icon {
+    width: 18px;
+
+    transform: rotate(-90deg);
   }
 }

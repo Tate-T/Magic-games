@@ -102,10 +102,6 @@ body {
   color: #ffffff;
 }
 
-// .dark-mode button {
-//   border: solid 0.5px #ffffff;
-// }
-
 .dark-mode .slider__icon {
   stroke: #ffffff;
   fill: #000000;
@@ -302,6 +298,16 @@ body {
 
 .dark-mode section::after {
   background-color: #ffffff;
+}
+
+.dark-mode .scroll {
+  border: 3px solid #fff;
+
+  background-color: #000;
+
+  &:hover {
+    box-shadow: rgba(255, 255, 255, 0.6) 0px 3px 6px, rgba(255, 255, 255, 0.6) 0px 3px 6px;
+  }
 }
 
 * {
