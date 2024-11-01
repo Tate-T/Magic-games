@@ -9,10 +9,3 @@ window.onscroll = () => {
     scrollToTopEl.style.bottom = "-100vh";
   }
 };
-
-const themeChangerEl = document.querySelector(".header__theme-changer");
-const arrowEl = document.querySelector(".scroll__icon");
-
-themeChangerEl.addEventListener("change", () => {
-  arrowEl.src = "./images/dark-mode-arrow.webp";
-});
