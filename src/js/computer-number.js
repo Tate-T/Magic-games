@@ -16,12 +16,12 @@ const guessNumber = () => {
       resultTextEl.classList.remove("computer-number__text--correctly");
       resultTextEl.classList.add("computer-number__text--uncorrectly");
 
-      resultTextEl.textContent = "Введіть число <10";
+      resultTextEl.textContent = "Введіть число ≤10";
     } else if (Number(inputVal) < 1) {
       resultTextEl.classList.remove("computer-number__text--correctly");
       resultTextEl.classList.add("computer-number__text--uncorrectly");
 
-      resultTextEl.textContent = "Введіть число >1";
+      resultTextEl.textContent = "Введіть число ≥1";
     } else {
       resultTextEl.classList.remove("computer-number__text--correctly");
       resultTextEl.classList.add("computer-number__text--uncorrectly");

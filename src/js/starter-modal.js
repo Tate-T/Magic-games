@@ -12,7 +12,7 @@ document.body.classList.add("no-scroll");
 let userName = '';
 
 starterExit.addEventListener("click", () => {
-  startBackdrop.classList.add("is__hidden");
+  startBackdrop.classList.add("modal-hidden");
   document.body.classList.remove("no-scroll");
   headerNameUserEl.textContent = ", User";
 });
@@ -30,10 +30,9 @@ starterForm.addEventListener("submit", (e) => {
 
     starterInput.classList.remove("footer__input--wrong");
 
-    starterButton.addEventListener("click", () => {
       e.preventDefault();
 
-      startBackdrop.classList.add("is__hidden");
+      startBackdrop.classList.add("modal-hidden");
       document.body.classList.remove("no-scroll");
 
       headerNameUserEl.textContent = `, ${userName}`;
@@ -52,7 +51,7 @@ starterForm.addEventListener("submit", (e) => {
       }
     
       checkUserName(userName);
-    });
+    
   }
 });
 

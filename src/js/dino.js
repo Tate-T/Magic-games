@@ -10,7 +10,9 @@ const dinoModalExit = document.querySelector(".dino__modal-close");
 dinoModalExit.addEventListener("click", (e) => {
     e.preventDefault();
     document.body.classList.remove("no-scroll");
-    dinoModalEl.classList.add("is__hidden");
+    dinoModalEl.classList.add("modal-hidden");
+    dinoModalEl.classList.remove("modal-visible");
+    
     resetGame(); 
 });
 
@@ -54,7 +56,8 @@ function startGame() {
         ) {
             isGameOver = true;
             document.body.classList.add("no-scroll");
-            dinoModalEl.classList.remove("is__hidden");
+            dinoModalEl.classList.remove("modal-hidden");
+            dinoModalEl.classList.add("modal-visible");
             cactus.style.animationPlayState = "paused"; 
             clearInterval(gameLoop); 
         }

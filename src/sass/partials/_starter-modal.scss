@@ -8,13 +8,23 @@
   top: 0;
   bottom: 0;
   display: flex;
+  
   align-items: center;
+  
+  transition: opacity 500ms ease-in-out, visibility 250ms ease-in-out;
 }
 
 .is__hidden{
   display: none;
 }
-
+.modal-hidden{
+  visibility: hidden;
+  opacity: 0;
+}
+.modal-visible{
+  visibility: visible;
+  opacity: 1;
+}
 .s__modal {
   width: 576px;
   height: 316px;
