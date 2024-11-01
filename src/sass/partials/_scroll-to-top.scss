@@ -27,8 +27,12 @@
   }
 
   &__icon {
-    width: 18px;
+    width: 100%;
+    height: 100%;
 
-    transform: rotate(-90deg);
+    background-image: url("../images/arrow.webp");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

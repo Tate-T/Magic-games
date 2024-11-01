@@ -308,6 +308,10 @@ body {
   &:hover {
     box-shadow: rgba(255, 255, 255, 0.6) 0px 3px 6px, rgba(255, 255, 255, 0.6) 0px 3px 6px;
   }
+
+  &__icon {
+    background-image: url("../images/dark-mode-arrow.webp");
+  }
 }
 
 * {
