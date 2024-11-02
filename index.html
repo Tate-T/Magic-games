@@ -14,7 +14,7 @@
     
     <title>Magic games</title>
     <script type="module" crossorigin src="/Magic-games/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/Magic-games/assets/index-539ff04a.css">
+    <link rel="stylesheet" href="/Magic-games/assets/index-7e09760f.css">
   </head>
   <body>
     <div class="backdrop s__modal-backdrop ">
@@ -62,14 +62,14 @@
               <use href="/Magic-games/assets/sprite-eed80f8a.svg#menu-arrow"></use>
             </svg>
             <ul class="header__interactives-list">
-              <li class="header__interactives-item">
-                <a id="numerical-button" class="header__interactives-link">Числовий</a>
+              <li id="numerical-button" class="header__interactives-item">
+                <a class="header__interactives-link">Числовий</a>
               </li>
-              <li class="header__interactives-item">
-                <a id="game-button" class="header__interactives-link">Ігровий</a>
+              <li id="game-button" class="header__interactives-item">
+                <a class="header__interactives-link">Ігровий</a>
               </li>
-              <li class="header__interactives-item">
-                <a id="acquaintance-button" class="header__interactives-link">Ознайомчий</a>
+              <li id="acquaintance-button" class="header__interactives-item">
+                <a  class="header__interactives-link">Ознайомчий</a>
               </li>
             </ul>
           </a>
@@ -204,7 +204,7 @@
             class="calculator__radio"
             id="calc-radio-1"
           />
-          <button class="calculator__btn">+</button>
+          <button class="calculator__btn" type="button">+</button>
         </li>
         <li class="calculator__item">
           <label for="calc-radio-2"></label>
@@ -215,7 +215,7 @@
             class="calculator__radio"
             id="calc-radio-2"
           />
-          <button class="calculator__btn">*</button>
+          <button class="calculator__btn" type="button">*</button>
         </li>
         <li class="calculator__item">
           <label for="calc-radio-3"></label>
@@ -226,7 +226,7 @@
             class="calculator__radio"
             id="calc-radio-3"
           />
-          <button class="calculator__btn">-</button>
+          <button class="calculator__btn" type="button">-</button>
         </li>
         <li class="calculator__item">
           <label for="calc-radio-4"></label>
@@ -237,7 +237,7 @@
             class="calculator__radio"
             id="calc-radio-4"
           />
-          <button class="calculator__btn">/</button>
+          <button class="calculator__btn" type="button">/</button>
         </li>
       </ul>
       <input
@@ -245,7 +245,7 @@
         class="calculator__input calculator__input--second"
         placeholder="Введіть число"
       />
-      <button class="calculator__btn--equals">=</button>
+      <button class="calculator__btn--equals" type="button">=</button>
       <p class="calculator__output">Результат</p>
     </div>
   </div>
@@ -295,7 +295,7 @@
         <h2 class="football__title">
             Футбол
             <span>
-                <button class="football__info-button">
+                <button class="football__info-button" type="button">
                     <div class="football__info-button-icon"></div>
                 </button>
                 <div class="football__info-box">
@@ -303,6 +303,14 @@
                 </div>
             </span>
         </h2>
+        <ul class="football__buttons-list">
+            <li class="football__buttons-item">
+                <button class="football__button" id="game-mode-button" type="button">Режими гри</button>
+            </li>
+            <li class="football__buttons-item">
+                <button class="football__button" id="instruction-button" type="button">Інструкція</button>
+            </li>
+        </ul>
         <div class="football__stadium">
             <p class="score">0</p>
             <p class="football__stadium-time"><span class="time-minutes">00</span> : <span class="time-seconds">00</span></p>
@@ -315,8 +323,8 @@
         <div class="football__modal-backdrop backdrop is__hidden">
     <div class="football__modal">
         <h2 class="football__modal-title">ГООО000Л!!!</h2>
-        <p id="goal-info">
-            Гравець <span id="goal-player"></span> забив свій <span id="goal-quantity"></span> гол на <span id="goal-minutes"></span><span id="goal-seconds"></span>
+        <p id="goal-info" class="goal-info">
+            Гравець <span id="goal-player"></span> забив свій <span class="goal-quantity"></span> гол на <span id="goal-minutes"></span><span id="goal-seconds"></span>
         </p>
         <div class="football__modal-box">
             <div class="football__modal-icon"></div>
@@ -326,6 +334,169 @@
         </div>
         <button type="submit" class="football__modal-close">
             <div class="football__modal-cross"></div>
+        </button>
+    </div>
+</div>
+
+        <!-- fm = football-modes -->
+<div class="fm__modal-backdrop backdrop is__hidden">
+    <div class="fm__modal">
+        <h2 class="fm__modal-title">Режими гри:</h2>
+        <button type="submit" class="fm__modal-close">
+            <div class="fm__modal-cross"></div>
+        </button>
+        <ul class="fm__modal-list">
+            <li class="fm__modal-item">
+                <h3 class="fm__modal-item-title">Вільна гра</h3>
+                <div class="fm__modal-item-box">
+                    <div id="free-game-mode-icon" class="fm__modal-item-icon"></div>
+                    <div class="confirm__modal-backdrop backdrop is__hidden" id="confirm-free-game-mode">
+                        <div class="confirm__modal">
+                            <h2 class="confirm__modal-title">Ви справді хочете зіграти в такий режим, як "Вільна гра"?</h2>
+                            <div class="confirm__modal-box">
+                                <button class="confirm__modal-button confirm__modal-free-game-no" type="button">Ні</button>
+                                <button class="confirm__modal-button confirm__modal-free-game-yes" type="button">Так</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fm__modal-item-text">
+                        <p class="fm__modal-item-text-title">Опис</p>
+                        <p class="fm__modal-item-text-paragraph">Тут ви можете грати скільки хочете і бали не будуть впливати ні на що. Проте тут ви не отримаєте нагороди.</p>
+                    </div>
+                </div>
+                <button class="fm__modal-item-button" id="free-game-mode" type="button">Грати</button>
+            </li>
+            <li class="fm__modal-item">
+                <h3 class="fm__modal-item-title">Класична гра</h3>
+                <div class="fm__modal-item-box">
+                    <div id="classic-game-mode-icon" class="fm__modal-item-icon"></div>
+                    <div class="confirm__modal-backdrop backdrop is__hidden" id="confirm-classic-game-mode">
+                        <div class="confirm__modal">
+                            <h2 class="confirm__modal-title">Ви справді хочете зіграти в такий режим, як "Класична гра"?</h2>
+                            <div class="confirm__modal-box">
+                                <button class="confirm__modal-button confirm__modal-classic-game-no" type="button">Ні</button>
+                                <button class="confirm__modal-button confirm__modal-classic-game-yes" type="button">Так</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fm__modal-item-text">
+                        <p class="fm__modal-item-text-title">Опис</p>
+                        <p class="fm__modal-item-text-paragraph">Це звичайний режим без приколів. Тут ви можете отримати багато нагород, але час буде іти без кінця.</p>
+                    </div>
+                </div>
+                <button class="fm__modal-item-button" id="classic-game-mode" type="button">Грати</button>
+            </li>
+            <li class="fm__modal-item">
+                <h3 class="fm__modal-item-title">Хардкор</h3>
+                <div class="fm__modal-item-box">
+                    <div id="hard-game-mode-icon" class="fm__modal-item-icon"></div>
+                    <div class="confirm__modal-backdrop backdrop is__hidden" id="confirm-hard-game-mode">
+                        <div class="confirm__modal">
+                            <h2 class="confirm__modal-title">Ви справді хочете зіграти в такий режим, як "Хардкор"?</h2>
+                            <div class="confirm__modal-box">
+                                <button class="confirm__modal-button confirm__modal-hard-game-no" type="button">Ні</button>
+                                <button class="confirm__modal-button confirm__modal-hard-game-yes" type="button">Так</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fm__modal-item-text">
+                        <p class="fm__modal-item-text-title">Опис</p>
+                        <p class="fm__modal-item-text-paragraph">Найважчий режим у футболі, тут потрібно забити 30 голів за 1 хвилину.</p>
+                    </div>
+                </div>
+                <button class="fm__modal-item-button" id="hard-game-mode" type="button">Грати</button>
+            </li>
+        </ul>
+    </div>
+</div>
+        <!-- fi = football-instruction -->
+<div class="fi__modal-backdrop backdrop is__hidden">
+  <div class="fi__modal">
+    <h2 class="fi__modal-title">Інструкція</h2>
+    <div class="fi__modal-line"></div>
+    <div class="fi__modal-box">
+      <p class="fi__modal-text fi__modal-text1">
+        Футбол - це міні-гра в якій є три режими для веселого проведення часу.
+      </p>
+      <p class="fi__modal-text fi__modal-text2">Три режими поділяються на:</p>
+      <p class="fi__modal-text fi__modal-text3">
+        Вільний режим: Це як тренувальне поле, де ти можеш грати скільки
+        завгодно, відпрацьовуючи різні удари та обводки. Тут немає обмежень за
+        часом.
+      </p>
+      <p class="fi__modal-text fi__modal-text4">
+        Класичний режим: Це більш звичний режим, де гра починається автоматично.
+        Тут ти граєш за певними правилами, як у звичайному футбольному матчі.
+      </p>
+      <p class="fi__modal-text fi__modal-text4">
+        Хардкор режим: Для справжніх любителів футболу! Тут тобі доведеться
+        показати всю свою майстерність, адже за одну хвилину потрібно забити аж
+        30 голів!
+      </p>
+      <p class="fi__modal-text fi__modal-text5">
+        Для керування, натискайте ліву кнопку миші на стадіоні і м'яч покотиться
+        до курсору.
+      </p>
+      <p class="fi__modal-text fi__modal-text6">
+        Головна мета у футболі – забити м’яч у ворота і точно влучити у ворота.
+      </p>
+      <p class="fi__modal-text fi__modal-text7">
+        Чим більше ви граєте, тим кращим стаєте. Спробуйте різні прийоми та
+        комбінації. Не бійтесь пробувати нові речі. Можливо, ви знайдете свій
+        унікальний стиль гри.
+      </p>
+      <p class="fi__modal-text fi__modal-text8">
+        Головне – отримуйте задоволення від процесу! Футбол – це чудова гра, яка
+        допомагає розвивати координацію та швидкість реакції.
+      </p>
+    </div>
+    <div class="fi__modal-icons">
+        <div class="fi__modal-icon"></div>
+        <div class="fi__modal-icon"></div>
+        <div class="fi__modal-icon"></div>
+        <div class="fi__modal-icon"></div>
+        <div class="fi__modal-icon"></div>
+        <div class="fi__modal-icon"></div>
+    </div>
+    <button type="submit" class="fi__modal-close">
+      <div class="fi__modal-cross"></div>
+    </button>
+  </div>
+</div>
+
+        <!-- fw = football-win -->
+<div class="fw__modal-backdrop backdrop is__hidden">
+    <div class="fw__modal">
+        <h2 class="fw__modal-title">Ви виграли!</h2>
+        <p id="match-info" class="match-info">
+            Голів забито за матч: <span class="goal-quantity"></span>.
+        </p>
+        <div class="fw__modal-box">
+            <div class="fw__modal-icon"></div>
+            <div class="fw__modal-icon"></div>
+            <div class="fw__modal-icon"></div>
+            <div class="fw__modal-icon"></div>
+        </div>
+        <button type="submit" class="fw__modal-close">
+            <div class="fw__modal-cross"></div>
+        </button>
+    </div>
+</div>
+        <!-- fl = football-lose -->
+<div class="fl__modal-backdrop backdrop is__hidden">
+    <div class="fl__modal">
+        <h2 class="fl__modal-title">Ви програли!</h2>
+        <p id="match-info" class="match-info">
+            Голів забито за матч: <span class="goal-quantity"></span>.
+        </p>
+        <div class="fl__modal-box">
+            <div class="fl__modal-icon"></div>
+            <div class="fl__modal-icon"></div>
+            <div class="fl__modal-icon"></div>
+            <div class="fl__modal-icon"></div>
+        </div>
+        <button type="submit" class="fl__modal-close">
+            <div class="fl__modal-cross"></div>
         </button>
     </div>
 </div>
@@ -552,37 +723,37 @@
             <li class="scientists__buttons-column">
                 <ul>
                     <li class="scientists__buttons-item">
-                        <button class="scientists__button" id="scientists-button1">Які вчені народилися в 19 ст.</button>
+                        <button class="scientists__button" id="scientists-button1" type="button">Які вчені народилися в 19 ст.</button>
                     </li>
                     <li class="scientists__buttons-item">
-                        <button class="scientists__button" id="scientists-button2">Відсортувати вчених за алфавітом</button>
+                        <button class="scientists__button" id="scientists-button2" type="button">Відсортувати вчених за алфавітом</button>
                     </li>
                     <li class="scientists__buttons-item">
-                        <button class="scientists__button" id="scientists-button3">Відсортувати вчених за кількістю прожитих років</button>
+                        <button class="scientists__button" id="scientists-button3" type="button">Відсортувати вчених за кількістю прожитих років</button>
                     </li>
                     <li class="scientists__buttons-item">
-                        <button class="scientists__button" id="scientists-button4">Знайти вченого, який народився найпізніше</button>
+                        <button class="scientists__button" id="scientists-button4" type="button">Знайти вченого, який народився найпізніше</button>
                     </li>
                 </ul>
             </li>
             <li class="scientists__buttons-column">
                 <ul>
                     <li class="scientists__buttons-item">
-                        <button class="scientists__button" id="scientists-button5">Знайти рік народження Albert Einshtein</button>
+                        <button class="scientists__button" id="scientists-button5" type="button">Знайти рік народження Albert Einshtein</button>
                     </li>
                     <li class="scientists__buttons-item">
-                        <button class="scientists__button" id="scientists-button6">Знайти вчених, прізвища яких починаються на на літеру “С”</button>
+                        <button class="scientists__button" id="scientists-button6" type="button">Знайти вчених, прізвища яких починаються на на літеру “С”</button>
                     </li>
                     <li class="scientists__buttons-item">
-                        <button class="scientists__button" id="scientists-button7">Видалити всіх вчених, ім’я яких починається на “А”</button>
+                        <button class="scientists__button" id="scientists-button7" type="button">Видалити всіх вчених, ім’я яких починається на “А”</button>
                     </li>
                     <li class="scientists__buttons-item">
-                        <button class="scientists__button" id="scientists-button8">Знайти вченого, який прожив найдовше і вченого, який прожив найменше</button>
+                        <button class="scientists__button" id="scientists-button8" type="button">Знайти вченого, який прожив найдовше і вченого, який прожив найменше</button>
                     </li>
                 </ul>
             </li>
         </ul>
-        <button class="scientists__button" id="scientists-button9">Знайти вчених, в яких співпадають перші літери імені і прізвища</button>
+        <button class="scientists__button" id="scientists-button9" type="button">Знайти вчених, в яких співпадають перші літери імені і прізвища</button>
     </div>
 </section>
       </div>
