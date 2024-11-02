@@ -136,7 +136,8 @@ function throwBall() {
         removePause();
 
         document.body.classList.add("no-scroll");
-        footballModalEl.classList.remove("is__hidden");
+        footballModalEl.classList.remove("modal-hidden");
+        footballModalEl.classList.add("modal-visible");
 
         score++;
         footballScore.textContent = `${score}`;
@@ -154,7 +155,8 @@ function throwBall() {
       e.preventDefault();
       addPause();
       document.body.classList.remove("no-scroll");
-      footballModalEl.classList.add("is__hidden");
+      footballModalEl.classList.add("modal-hidden");
+      footballModalEl.classList.remove("modal-visible");
 
       const allBallCoords = [
         { left: "100px", top: "75px" },
@@ -242,7 +244,8 @@ function exitGameModes() {
   gameModeButton.addEventListener("click", (e) => {
     e.preventDefault();
     document.body.classList.add("no-scroll");
-    gameModes.classList.remove("is__hidden");
+    gameModes.classList.remove("modal-hidden");
+    gameModes.classList.add("modal-visible");
 
     removePause();
 
@@ -259,7 +262,8 @@ function closeGameModes() {
   gameModesExit.addEventListener("click", (e) => {
     e.preventDefault();
     document.body.classList.remove("no-scroll");
-    gameModes.classList.add("is__hidden");
+    gameModes.classList.add("modal-hidden");
+    gameModes.classList.remove("modal-visible");
 
     addPause();
 
@@ -280,19 +284,23 @@ function confirmGameMode() {
   freeGameModeIcon.addEventListener("click", (e) => {
     e.preventDefault();
     document.body.classList.add("no-scroll");
-    confirmationFreeGameMode.classList.remove("is__hidden");
+    confirmationFreeGameMode.classList.remove("modal-hidden");
+    confirmationFreeGameMode.classList.add("modal-visible");
 
     confirmButtonFreeModeNo.addEventListener("click", (e) => {
       e.preventDefault();
       document.body.classList.remove("no-scroll");
-      confirmationFreeGameMode.classList.add("is__hidden");
+      confirmationFreeGameMode.classList.add("modal-hidden");
+      confirmationFreeGameMode.classList.remove("modal-visible");
     });
 
     confirmButtonFreeModeYes.addEventListener("click", (e) => {
       e.preventDefault();
       document.body.classList.remove("no-scroll");
-      confirmationFreeGameMode.classList.add("is__hidden");
-      gameModes.classList.add("is__hidden");
+      confirmationFreeGameMode.classList.add("modal-hidden");
+      confirmationFreeGameMode.classList.remove("modal-visible");
+      gameModes.classList.add("modal-hidden");
+      gameModes.classList.remove("modal-visible");
 
       footballTime.classList.add("football__stadium-time--hidden");
       goalInfoText.classList.add("goal-info--hidden");
@@ -315,19 +323,23 @@ function confirmGameMode() {
   freeGameModeButton.addEventListener("click", (e) => {
     e.preventDefault();
     document.body.classList.add("no-scroll");
-    confirmationFreeGameMode.classList.remove("is__hidden");
+    confirmationFreeGameMode.classList.remove("modal-hidden");
+    confirmationFreeGameMode.classList.add("modal-visible");
 
     confirmButtonFreeModeNo.addEventListener("click", (e) => {
       e.preventDefault();
       document.body.classList.remove("no-scroll");
-      confirmationFreeGameMode.classList.add("is__hidden");
+      confirmationFreeGameMode.classList.add("modal-hidden");
+      confirmationFreeGameMode.classList.remove("modal-visible");
     });
 
     confirmButtonFreeModeYes.addEventListener("click", (e) => {
       e.preventDefault();
       document.body.classList.remove("no-scroll");
-      confirmationFreeGameMode.classList.add("is__hidden");
-      gameModes.classList.add("is__hidden");
+      confirmationFreeGameMode.classList.add("modal-hidden");
+      confirmationFreeGameMode.classList.remove("modal-visible");
+      gameModes.classList.add("modal-hidden");
+      gameModes.classList.remove("modal-visible");
 
       footballTime.classList.add("football__stadium-time--hidden");
       goalInfoText.classList.add("goal-info--hidden");
@@ -352,19 +364,23 @@ function confirmGameMode() {
   classicGameModeIcon.addEventListener("click", (e) => {
     e.preventDefault();
     document.body.classList.add("no-scroll");
-    confirmationClassicGameMode.classList.remove("is__hidden");
+    confirmationClassicGameMode.classList.remove("modal-hidden");
+    confirmationClassicGameMode.classList.add("modal-visible");
 
     confirmButtonClassicModeNo.addEventListener("click", (e) => {
       e.preventDefault();
       document.body.classList.remove("no-scroll");
-      confirmationClassicGameMode.classList.add("is__hidden");
+      confirmationClassicGameMode.classList.add("modal-hidden");
+      confirmationClassicGameMode.classList.remove("modal-visible");
     });
 
     confirmButtonClassicModeYes.addEventListener("click", (e) => {
       e.preventDefault();
       document.body.classList.remove("no-scroll");
-      confirmationClassicGameMode.classList.add("is__hidden");
-      gameModes.classList.add("is__hidden");
+      confirmationClassicGameMode.classList.add("modal-hidden");
+      confirmationClassicGameMode.classList.remove("modal-visible");
+      gameModes.classList.add("modal-hidden");
+      gameModes.classList.remove("modal-visible");
 
       footballTime.classList.remove("football__stadium-time--hidden");
       goalInfoText.classList.remove("goal-info--hidden");
@@ -390,19 +406,23 @@ function confirmGameMode() {
   classicGameModeButton.addEventListener("click", (e) => {
     e.preventDefault();
     document.body.classList.add("no-scroll");
-    confirmationClassicGameMode.classList.remove("is__hidden");
+    confirmationClassicGameMode.classList.remove("modal-hidden");
+    confirmationClassicGameMode.classList.add("modal-visible");
 
     confirmButtonClassicModeNo.addEventListener("click", (e) => {
       e.preventDefault();
       document.body.classList.remove("no-scroll");
-      confirmationClassicGameMode.classList.add("is__hidden");
+      confirmationClassicGameMode.classList.add("modal-hidden");
+      confirmationClassicGameMode.classList.remove("modal-visible");
     });
 
     confirmButtonClassicModeYes.addEventListener("click", (e) => {
       e.preventDefault();
       document.body.classList.remove("no-scroll");
-      confirmationClassicGameMode.classList.add("is__hidden");
-      gameModes.classList.add("is__hidden");
+      confirmationClassicGameMode.classList.add("modal-hidden");
+      confirmationClassicGameMode.classList.remove("modal-visible");
+      gameModes.classList.add("modal-hidden");
+      gameModes.classList.remove("modal-visible");
 
       footballTime.classList.remove("football__stadium-time--hidden");
       goalInfoText.classList.remove("goal-info--hidden");
@@ -430,19 +450,23 @@ function confirmGameMode() {
   hardGameModeButton.addEventListener("click", (e) => {
     e.preventDefault();
     document.body.classList.add("no-scroll");
-    confirmationhardGameMode.classList.remove("is__hidden");
+    confirmationhardGameMode.classList.remove("modal-hidden");
+    confirmationhardGameMode.classList.add("modal-visible");
 
     confirmButtonhardModeNo.addEventListener("click", (e) => {
       e.preventDefault();
       document.body.classList.remove("no-scroll");
-      confirmationhardGameMode.classList.add("is__hidden");
+      confirmationhardGameMode.classList.add("modal-hidden");
+      confirmationhardGameMode.classList.remove("modal-visible");
     });
 
     confirmButtonhardModeYes.addEventListener("click", (e) => {
       e.preventDefault();
       document.body.classList.remove("no-scroll");
-      confirmationhardGameMode.classList.add("is__hidden");
-      gameModes.classList.add("is__hidden");
+      confirmationhardGameMode.classList.add("modal-hidden");
+      confirmationhardGameMode.classList.remove("modal-visible");
+      gameModes.classList.add("modal-hidden");
+      gameModes.classList.remove("modal-visible");
 
       footballTime.classList.remove("football__stadium-time--hidden");
       goalInfoText.classList.remove("goal-info--hidden");
@@ -467,18 +491,22 @@ function confirmGameMode() {
   hardGameModeIcon.addEventListener("click", (e) => {
     e.preventDefault();
     document.body.classList.add("no-scroll");
-    confirmationhardGameMode.classList.remove("is__hidden");
+    confirmationhardGameMode.classList.remove("modal-hidden");
+    confirmationhardGameMode.classList.add("modal-visible");
 
     confirmButtonhardModeNo.addEventListener("click", (e) => {
       e.preventDefault();
       document.body.classList.remove("no-scroll");
-      confirmationhardGameMode.classList.add("is__hidden");
+      confirmationhardGameMode.classList.add("modal-hidden");
+      confirmationhardGameMode.classList.remove("modal-visible");
     });
 
     confirmButtonhardModeYes.addEventListener("click", (e) => {
       document.body.classList.remove("no-scroll");
-      confirmationhardGameMode.classList.add("is__hidden");
-      gameModes.classList.add("is__hidden");
+      confirmationhardGameMode.classList.add("modal-hidden");
+      confirmationhardGameMode.classList.remove("modal-visible");
+      gameModes.classList.add("modal-hidden");
+      gameModes.classList.remove("modal-visible");
 
       footballTime.classList.remove("football__stadium-time--hidden");
       goalInfoText.classList.remove("goal-info--hidden");
@@ -534,10 +562,12 @@ function hardGameTime() {
 
         if (score >= 30) {
           document.body.classList.add("no-scroll");
-          footballWin.classList.remove("is__hidden"); 
+          footballWin.classList.remove("modal-hidden"); 
+          footballWin.classList.add("modal-visible"); 
         } else {
           document.body.classList.add("no-scroll");
-          footballLose.classList.remove("is__hidden"); 
+          footballLose.classList.remove("modal-hidden"); 
+          footballLose.classList.add("modal-visible"); 
         }
       }
 
@@ -554,7 +584,8 @@ function hardGameTime() {
 function closeFootballWin() {
   footballWinExit.addEventListener("click", () => {
     document.body.classList.remove("no-scroll");
-    footballWin.classList.add("is__hidden"); 
+    footballWin.classList.add("modal-hidden"); 
+    footballWin.classList.remove("modal-visible"); 
 
     footballMinutes.textContent = "00";
     footballSeconds.textContent = "00";
@@ -576,7 +607,8 @@ closeFootballWin();
 function closeFootballLose() {
   footballLoseExit.addEventListener("click", () => {
     document.body.classList.remove("no-scroll");
-    footballLose.classList.add("is__hidden"); 
+    footballLose.classList.add("modal-hidden"); 
+    footballLose.classList.remove("modal-visible"); 
 
     footballMinutes.textContent = "00";
     footballSeconds.textContent = "00";
@@ -598,14 +630,16 @@ closeFootballLose();
 function exitFootballInstruction() {
   instructionButton.addEventListener("click", () => {
     document.body.classList.add("no-scroll");
-    footballInstruction.classList.remove("is__hidden"); 
+    footballInstruction.classList.remove("modal-hidden"); 
+    footballInstruction.classList.add("modal-visible"); 
   });
 }
 
 function closeFootballInstruction() {
   footballInstructionExit.addEventListener("click", () => {
     document.body.classList.remove("no-scroll");
-    footballInstruction.classList.add("is__hidden"); 
+    footballInstruction.classList.add("modal-hidden"); 
+    footballInstruction.classList.remove("modal-visible"); 
   });
 }
 
