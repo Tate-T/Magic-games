@@ -1,4 +1,4 @@
-.football__modal {
+.fl__modal {
   position: relative;
   padding: 70px 138px 100px 138px;
   margin-right: auto;
@@ -27,47 +27,22 @@
     font-weight: 400;
   }
 
-  .goal-info {
+  .match-info {
     opacity: 1;
     text-align: center;
     margin: 10px auto 0 auto;
 
     width: 150px;
+
     font-family: Inter;
     font-size: 10px;
     font-weight: 400;
 
-    #goal-player {
-      color: $black-color;
-      font-family: Inter;
-      font-size: 10px;
-      font-weight: 400;
-    }
-
     .goal-quantity {
-      color: $black-color;
       font-family: Inter;
       font-size: 10px;
       font-weight: 400;
     }
-
-    #goal-minutes {
-      color: $black-color;
-      font-family: Inter;
-      font-size: 10px;
-      font-weight: 400;
-    }
-
-    #goal-seconds {
-      color: $black-color;
-      font-family: Inter;
-      font-size: 10px;
-      font-weight: 400;
-    }
-  }
-
-  .goal-info--hidden {
-    opacity: 0;
   }
 
   &-icon {
@@ -118,9 +93,9 @@
   &-cross {
     width: 17px;
     height: 17px;
-
     fill: #000;
     stroke: #000;
+
     background-image: url(../images/icon-close.webp);
   }
 }

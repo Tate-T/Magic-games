@@ -76,6 +76,28 @@
         }
     }
 
+    &__buttons-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 250px;
+        margin: 36px;
+    }
+
+    &__button {
+        padding: 10px 20px;
+
+        color: $white-color;
+        text-align: right;
+        font-family: "Montserrat Alternates";
+        font-size: 12px;
+        font-weight: 400;
+
+        border-radius: 20px;
+        background: $black-color;
+        box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+    }
+
     &__stadium {
         position: relative;
         margin-left: auto;
@@ -87,6 +109,20 @@
         border-radius: 37px;
         border: 2px solid $black-color;
         background: $light-green-color;
+
+        transition: all 2000ms ease-in-out;
+
+        &--free {
+            background: $light-green-color;
+        }
+
+        &--classic {
+            background: $light-green-color;
+        }
+
+        &--hard {
+            background: #da9203;
+        }
 
         .score {
             position: absolute;
@@ -107,10 +143,16 @@
             right: 10px;
             left: 615px;
 
+            opacity: 1;
+
             color: $black-color;
             font-family: "Montserrat Alternates";
             font-size: 25px;
             font-weight: 600;
+
+            &--hidden {
+                opacity: 0;
+            }
 
             .time-minutes {
                 color: $black-color;

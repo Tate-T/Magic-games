@@ -1,0 +1,102 @@
+.fw__modal {
+    position: relative;
+    padding: 70px 138px 100px 138px;
+    margin-right: auto;
+    margin-left: auto;
+  
+    width: 463px;
+  
+    background-color: #fff;
+    border-radius: 20px;
+  
+    &-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+  
+      width: 15px;
+      height: 15px;
+  
+      background-color: transparent;
+    }
+  
+    &-title {
+      text-align: center;
+      font-family: Inter;
+      font-size: 25px;
+      font-weight: 400;
+    }
+  
+    .match-info {
+      opacity: 1;
+      text-align: center;
+      margin: 10px auto 0 auto;
+  
+      width: 150px;
+      
+      font-family: Inter;
+      font-size: 10px;
+      font-weight: 400;
+
+      .goal-quantity {
+        font-family: Inter;
+        font-size: 10px;
+        font-weight: 400;
+      }
+    }
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+  
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3),
+      &:last-child {
+        position: absolute;
+      }
+  
+      &:first-child {
+        position: absolute;
+        top: -39px;
+        left: -65px;
+  
+        background-image: url(../images/sword.webp);
+      }
+  
+      &:nth-child(2) {
+        top: 35px;
+        left: -29px;
+  
+        background-image: url(../images/puzzle.webp);
+      }
+  
+      &:nth-child(3) {
+        top: -39px;
+        right: -65px;
+  
+        background-image: url(../images/console.webp);
+      }
+  
+      &:last-child {
+        top: 35px;
+        right: -29px;
+  
+        background-image: url(../images/game.webp);
+      }
+    }
+  
+    &-box {
+      position: relative;
+    }
+  
+    &-cross {
+      width: 17px;
+      height: 17px;
+      fill: #000;
+      stroke: #000;
+  
+      background-image: url(../images/icon-close.webp);
+    }
+  }
+  

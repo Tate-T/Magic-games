@@ -25,8 +25,8 @@ body {
 
 .dark-mode .main__box {
   background-color: #000000;
-  border-left: solid 2px #FFF;
-  border-right: solid 2px #FFF;
+  border-left: solid 2px #fff;
+  border-right: solid 2px #fff;
   transition: all 600ms ease-in-out;
 }
 
@@ -65,8 +65,13 @@ body {
 
     &--show {
       background-image: url(../images/icon-info.webp);
+    }
   }
-  }
+}
+
+.dark-mode .football__button {
+  padding: 10px 19px;
+  border: solid 1px #ffffff;
 }
 
 .dark-mode .football__stadium-time {
@@ -123,6 +128,10 @@ body {
 }
 
 .dark-mode h2 {
+  color: #ffffff;
+}
+
+.dark-mode h3 {
   color: #ffffff;
 }
 
@@ -204,10 +213,7 @@ body {
 
 .dark-mode .scientists__button {
   padding: 10px 19px;
-  border: none;
-  background-color: #000000;
   border: solid 1px #ffffff;
-  color: #ffffff;
 }
 
 .dark-mode .dino__modal {
@@ -247,6 +253,24 @@ body {
 
   &-title {
     color: #ffffff;
+  } 
+
+  #goal-info {
+    #goal-player {
+      color: #ffffff;
+    }
+  
+    #goal-quantity {
+      color: #ffffff;
+    }
+  
+    #goal-minutes {
+      color: #ffffff;
+    }
+  
+    #goal-seconds {
+      color: #ffffff;
+    }
   }
 
   &-icon {
@@ -272,6 +296,18 @@ body {
   }
 }
 
+.dark-mode .confirm__modal {
+  width: 469px;
+  
+  border: solid 3px #ffffff;
+  background-color: #000000;
+
+  &-button {
+    padding: 10px 19px;
+    border: solid 1px #ffffff;
+  }
+}
+
 .dark-mode .f__modal {
   width: 469px;
 
@@ -280,6 +316,145 @@ body {
 
   &-title {
     color: #ffffff;
+  }
+
+  &-icon {
+    &:first-child {
+      background-image: url(../images/dark-mode-sword.webp);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../images/dark-mode-puzzle.webp);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../images/dark-mode-console.webp);
+    }
+
+    &:last-child {
+      background-image: url(../images/dark-mode-game.webp);
+    }
+  }
+
+  &-cross {
+    background-image: url(../images/dark-mode-icon-close.webp);
+  }
+}
+
+.dark-mode .fm__modal {
+  width: 906px;
+
+  background-color: #000000;
+  border: solid 3px #ffffff;
+
+  &-item {
+    border: solid 1px #fff;
+
+    &:hover {
+      background-color: #131212;
+    }
+
+    #free-game-mode-icon {
+      background-image: url(../images/dark-mode-free-game-mode.webp);
+    }
+
+    #classic-game-mode-icon {
+      background-image: url(../images/dark-mode-classic-game-mode.webp);
+    }
+
+    #hard-game-mode-icon {
+      background-image: url(../images/dark-mode-hard-game-mode.webp);
+    }
+
+    &-button {
+      padding: 10px 19px;
+      border: solid 1px #ffffff;
+    }
+  }
+
+  &-cross {
+    background-image: url(../images/dark-mode-icon-close.webp);
+  }
+}
+
+.dark-mode .fl__modal {
+  width: 469px;
+
+  background-color: #000000;
+  border: solid 3px #ffffff;
+
+  &-title {
+    color: #ffffff;
+  }
+
+  &-icon {
+    &:first-child {
+      background-image: url(../images/dark-mode-sword.webp);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../images/dark-mode-puzzle.webp);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../images/dark-mode-console.webp);
+    }
+
+    &:last-child {
+      background-image: url(../images/dark-mode-game.webp);
+    }
+  }
+
+  &-cross {
+    background-image: url(../images/dark-mode-icon-close.webp);
+  }
+}
+
+.dark-mode .fw__modal {
+  width: 469px;
+
+  background-color: #000000;
+  border: solid 3px #ffffff;
+
+  &-title {
+    color: #ffffff;
+  }
+
+  &-icon {
+    &:first-child {
+      background-image: url(../images/dark-mode-sword.webp);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../images/dark-mode-puzzle.webp);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../images/dark-mode-console.webp);
+    }
+
+    &:last-child {
+      background-image: url(../images/dark-mode-game.webp);
+    }
+  }
+
+  &-cross {
+    background-image: url(../images/dark-mode-icon-close.webp);
+  }
+}
+
+.dark-mode .fi__modal {
+  width: 1006px;
+
+  background-color: #000000;
+  border: solid 3px #ffffff;
+
+  &-title {
+    color: #ffffff;
+  }
+
+  &-line {
+    background-color: #ffffff;
   }
 
   &-icon {
@@ -328,7 +503,7 @@ body {
   font-family: "Montserrat Alternates";
   font-weight: 400;
   box-sizing: border-box;
-  
+
   &::selection {
     background-color: #000;
     color: #fff;
@@ -352,7 +527,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  background-color: #EEE;
+  background-color: #eee;
   transition: all 600ms ease-in-out;
 
   &__box {
@@ -360,6 +535,6 @@ body {
     margin: 0 auto;
     transition: all 400ms ease-in-out;
 
-    background-color: #FFF;
+    background-color: #fff;
   }
 }
