@@ -1,11 +1,11 @@
 const scrollToTopEl = document.querySelector(".scroll");
 
 window.onscroll = () => {
-    const pageOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+  const pageOffset = window.pageYOffset;
 
-    if (pageOffset >= 1000) {
-        scrollToTopEl.style.visibility = 'visible';
-    } else {
-        scrollToTopEl.style.visibility = 'hidden';
-    }
+  if (pageOffset >= 1000) {
+    scrollToTopEl.style.bottom = "50px";
+  } else {
+    scrollToTopEl.style.bottom = "-100vh";
+  }
 };
