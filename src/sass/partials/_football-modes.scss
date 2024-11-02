@@ -1,0 +1,196 @@
+.fm__modal {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 50px 30px 30px 30px;
+
+    width: 900px;
+
+    background-color: #fff;
+    border-radius: 20px;
+
+    &-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+
+        width: 15px;
+        height: 15px;
+
+        background-color: transparent;
+    }
+
+    &-title {
+        color: #000;
+        font-family: "Montserrat Alternates";
+        font-size: 25px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 36px;
+    }    
+
+    &-cross {
+        width: 17px;
+        height: 17px;
+    
+        fill: #000;
+        stroke: #000;
+        background-image: url(../images/icon-close.webp);
+    }
+
+    &-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &-item {
+        position: relative;
+
+        width: 100%;
+        height: 350px;
+
+        padding: 15px 15px 0 15px;
+        border: solid 1px #000;
+
+        transition: all 200ms ease;
+
+        &:first-child {
+            border-radius: 20px 0 0 20px;
+        }
+
+        &:last-child {
+            border-radius: 0 20px 20px 0;
+        }
+
+        &:hover {
+            background-color: #eeeeee;
+        }
+
+        &-title {
+            color: #000;
+            font-family: "Montserrat Alternates";
+            font-size: 20px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        &-icon {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+
+            width: 100px;
+            height: 100px;
+
+            cursor: pointer;
+        }
+
+        &-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #free-game-mode-icon {
+            transform: rotate(-45deg);
+
+            background-size: cover;
+            background-image: url(../images/free-game-mode.webp);
+        }
+
+        #classic-game-mode-icon {
+            background-size: cover;
+            background-image: url(../images/classic-game-mode.webp);
+        }
+
+        #hard-game-mode-icon {
+            background-size: cover;
+            background-image: url(../images/hard-game-mode.webp);
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0 0 0;
+
+            &-title {
+                color: #000;
+                font-family: "Montserrat Alternates";
+                font-size: 10px;
+                font-weight: 400;
+            }
+
+            &-paragraph {
+                color: #000;
+                font-family: "Montserrat Alternates";
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+
+        &-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            padding: 10px 20px;
+                    
+            color: $white-color;
+            text-align: right;
+            font-family: "Montserrat Alternates";
+            font-size: 18px;
+            font-weight: 400;
+
+            border-radius: 20px;
+            background: $black-color;
+            box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+.confirm__modal {
+    position: relative;
+    padding: 50px 80px 50px 80px;
+    margin: 0 auto;
+  
+    width: 463px;
+  
+    background-color: #fff;
+    border-radius: 20px;
+
+    &-title {
+        text-align: center;
+        margin-bottom: 30px;
+
+        color: #000;
+        font-family: "Montserrat Alternates";
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    &-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &-button {
+        padding: 10px 20px;
+
+        color: $white-color;
+        text-align: right;
+        font-family: "Montserrat Alternates";
+        font-size: 18px;
+        font-weight: 400;
+
+        border-radius: 20px;
+        background: $black-color;
+        box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+    }
+}
