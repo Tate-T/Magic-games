@@ -14,7 +14,7 @@
     
     <title>Magic games</title>
     <script type="module" crossorigin src="/Magic-games/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/Magic-games/assets/index-032c335e.css">
+    <link rel="stylesheet" href="/Magic-games/assets/index-539ff04a.css">
   </head>
   <body>
     <div class="backdrop s__modal-backdrop ">
@@ -294,9 +294,18 @@
     <div class="football__container container">
         <h2 class="football__title">
             Футбол
+            <span>
+                <button class="football__info-button">
+                    <div class="football__info-button-icon"></div>
+                </button>
+                <div class="football__info-box">
+                    <p class="football__info-text">Щоб розпочати гру, натисніть на будь-яке місце у межах поля:</p>
+                </div>
+            </span>
         </h2>
         <div class="football__stadium">
             <p class="score">0</p>
+            <p class="football__stadium-time"><span class="time-minutes">00</span> : <span class="time-seconds">00</span></p>
             <img class="football__stadium-ball" src="data:image/webp;base64,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" alt="Ball">
             <img class="football__stadium-gates" src="/Magic-games/assets/football-gates-0a93350d.webp" alt="Football Arch">
         </div>
@@ -306,6 +315,9 @@
         <div class="football__modal-backdrop backdrop is__hidden">
     <div class="football__modal">
         <h2 class="football__modal-title">ГООО000Л!!!</h2>
+        <p id="goal-info">
+            Гравець <span id="goal-player"></span> забив свій <span id="goal-quantity"></span> гол на <span id="goal-minutes"></span><span id="goal-seconds"></span>
+        </p>
         <div class="football__modal-box">
             <div class="football__modal-icon"></div>
             <div class="football__modal-icon"></div>
