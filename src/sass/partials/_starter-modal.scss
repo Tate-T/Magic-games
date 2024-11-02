@@ -17,14 +17,17 @@
 .is__hidden{
   display: none;
 }
+
 .modal-hidden{
   visibility: hidden;
   opacity: 0;
 }
+
 .modal-visible{
   visibility: visible;
   opacity: 1;
 }
+
 .s__modal {
   width: 576px;
   height: 316px;
